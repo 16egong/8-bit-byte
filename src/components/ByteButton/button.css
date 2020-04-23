@@ -1,0 +1,22 @@
+.byte-button {
+  min-width: 208px;
+  min-height: 57px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-color: transparent;
+  /* Label Settings */
+  color: #ff5c00;
+  font-size: 18px;
+  font-family: "A Goblin Appears";
+}
+
+.byte-button:hover {
+  cursor: pointer;
+  background-color: #ff5c00;
+  color: white;
+}

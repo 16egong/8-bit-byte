@@ -13,6 +13,38 @@
   color: #61dafb;
 }
 
+.goblin-text {
+  font-family: "A Goblin Appears";
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-divider-line {
+  width: 88px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 10px;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(180deg, #efc326 0%, #ff5c00 100%);
+}
+
+body > .login-hero {
+  color: white;
+  display: flex;
+  height: 100%;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
