@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 // Style imports
 import "./fonts/A Goblin Appears.otf";
 import "./App.css";
+import Header from "./components/Header";
 
 class App extends React.Component {
   constructor(props) {
@@ -31,7 +32,14 @@ class App extends React.Component {
             <Route path="/register">
               <RegisterPage />
             </Route>
-
+            <Route path="/about">
+              {/* TODO: Change this link */}
+              <HomePage />
+            </Route>
+            <Route path="/contact">
+              {/* TODO: Change this link */}
+              <HomePage />
+            </Route>
             <Route path="*">
               <Page404 />
             </Route>
