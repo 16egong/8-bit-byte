@@ -1,6 +1,7 @@
 import React from "react";
-import HomePage from "./components/Page/PageWithHeader";
+import { HomePage, AboutPage, ContactPage } from "./components/Page";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "./fonts/A Goblin Appears.otf";
 import "./App.css";
 
 function App() {
@@ -22,13 +23,13 @@ function App() {
       {/* Controls the actual routing section */}
       <Switch>
         <Route path="/home">
-          <HomePage title="Home" />
+          <HomePage />
         </Route>
         <Route path="/about">
-          <HomePage title="About" />
+          <AboutPage />
         </Route>
         <Route path="/contact">
-          <HomePage title="Contact" />
+          <ContactPage />
         </Route>
       </Switch>
     </Router>

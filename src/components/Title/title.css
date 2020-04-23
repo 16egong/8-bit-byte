@@ -1,0 +1,18 @@
+.page-title-container {
+  grid-area: header;
+  background-color: orange;
+  width: min(650px, 60%);
+  height: 80px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.page-title {
+  color: white;
+  font-family: "A Goblin Appears";
+  font-size: min(max(1.3rem, 3vw), 1.6rem);
+}
