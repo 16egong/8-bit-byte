@@ -13,6 +13,7 @@
   color: #ff5c00;
   font-size: 18px;
   font-family: "A Goblin Appears";
+  text-decoration: none;
 }
 
 .byte-button:hover {

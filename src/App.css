@@ -17,19 +17,6 @@
   font-family: "A Goblin Appears";
 }
 
-.login-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.login-divider-line {
-  width: 88px;
-  height: 3px;
-  background-color: white;
-  margin: 5px 10px;
-}
-
 body {
   position: relative;
   height: 100vh;

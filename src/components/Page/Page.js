@@ -4,10 +4,13 @@ import "./page.css";
 
 class Page extends Component {
   render() {
-    let { title } = this.props;
+    let { title, subtitle, backgroundColor } = this.props;
     return (
-      <div className="entire-page">
-        <Title title={title} />
+      <div
+        className="entire-page"
+        style={{ backgroundColor: { backgroundColor } }}
+      >
+        <Title title={title} subtitle={subtitle} />
       </div>
     );
   }

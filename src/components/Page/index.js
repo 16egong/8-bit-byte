@@ -1,29 +1,18 @@
 import React from "react";
 import Page from "./Page";
+import Home from "./HomePage";
 
 const HomePage = () => {
-  return (
-    <div>
-      <Page title="Home" />
-    </div>
-  );
+  return <Home />;
 };
 
-const AboutPage = () => {
-  return (
-    <div>
-      <Page title="About" />
-    </div>
-  );
+const LoginPage = () => {
+  return <Page title="Login" subtitle="Login to your account" />;
 };
 
-const ContactPage = () => {
-  return (
-    <div>
-      <Page title="Contact" />
-    </div>
-  );
+const RegisterPage = () => {
+  return <Page title="Register" subtitle="Register a new acccount" />;
 };
 
-export { HomePage, AboutPage, ContactPage };
+export { HomePage, LoginPage, RegisterPage };
 export default Page;

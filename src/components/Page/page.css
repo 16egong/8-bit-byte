@@ -1,9 +1,23 @@
 .entire-page {
   display: grid;
+  height: 100%;
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-template-areas:
     "header"
     "body"
     "footer";
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-divider-line {
+  width: 88px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 10px;
 }

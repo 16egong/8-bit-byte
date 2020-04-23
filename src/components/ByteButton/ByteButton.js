@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./button.css";
 
 const ByteButton = (props) => {
   return (
-    <button className="byte-button" onClick={() => props.onClick()}>
+    <Link to={props.to} className="byte-button" onClick={() => props.onClick()}>
       {props.label}
-    </button>
+    </Link>
   );
 };
 

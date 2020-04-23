@@ -1,18 +1,40 @@
+.page-title {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .page-title-container {
+  position: absolute;
+  top: 0;
   grid-area: header;
   background-color: orange;
   width: min(650px, 60%);
-  height: 80px;
+  min-width: 400px;
+  height: 90px;
   display: flex;
-  margin: auto;
   justify-content: center;
   align-items: center;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
+  /* Label Settings */
+  color: white;
 }
 
-.page-title {
-  color: white;
-  font-family: "A Goblin Appears";
-  font-size: min(max(1.3rem, 3vw), 1.6rem);
+.page-subtitle-container {
+  position: relative;
+  top: -30px;
+  background-color: white;
+  border-radius: 15px;
+  border-color: transparent;
+  width: min(400px, 40%);
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Label Settings */
+  font-weight: bolder;
+  font-size: 1.3rem;
+  color: var(--byte-orange);
 }
