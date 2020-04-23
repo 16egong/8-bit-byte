@@ -1,0 +1,9 @@
+.entire-page {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "body"
+    "footer";
+}

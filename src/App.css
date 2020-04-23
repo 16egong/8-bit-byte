@@ -21,3 +21,8 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "A Goblin Appears";
+  src: local("A Goblin Appears"), url("./fonts/A\ Goblin\ Appears.otf");
+}

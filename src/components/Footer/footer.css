@@ -1,0 +1,36 @@
+.footer {
+  grid-area: footer;
+  height: max(10vh, 360px);
+  color: var(--grey-text);
+  background-color: whitesmoke;
+  border-top: 3px solid #777777;
+  box-shadow: inset 0px 3px 5px #00000030;
+  padding: 50px 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+}
+
+.footer-sectionheader-container {
+  width: 343px;
+  border-bottom: 2px #888888 solid;
+}
+
+.footer-sectionheader-title {
+  font-family: "A Goblin Appears";
+  margin: 0px 5px 2px 10px;
+}
+
+.footer-section-links {
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 100px;
+  max-width: 40%;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.footer-section-links p {
+  margin: 2px 0px 2px 0px;
+}
