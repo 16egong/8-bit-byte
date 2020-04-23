@@ -1,0 +1,17 @@
+.header {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+}
+.logo-font {
+    font-family: "A Goblin Appears";
+    color: #F4A41B;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+}
+.navbar .navlink {
+    margin: 10px;
+}
