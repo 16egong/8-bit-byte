@@ -20,6 +20,7 @@ class App extends React.Component {
     return (
       <Router>
         {/* Header goes here */}
+        <Header />
         {/* Controls the actual routing section */}
         <body>
           <Switch>
