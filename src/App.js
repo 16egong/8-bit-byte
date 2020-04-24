@@ -1,5 +1,5 @@
 import React from "react";
-import { HomePage, LoginPage, RegisterPage } from "./components/Page";
+import { HomePage, LoginPage, RegisterPage, DietaryPage } from "./components/Page";
 import Page404 from "./components/Page/Page404";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -40,6 +40,9 @@ class App extends React.Component {
             <Route path="/contact">
               {/* TODO: Change this link */}
               <HomePage />
+            </Route>
+            <Route path="/dietary_prefences">
+              <DietaryPage />
             </Route>
             <Route path="*">
               <Page404 />
