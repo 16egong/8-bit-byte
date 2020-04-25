@@ -49,15 +49,9 @@ class App extends React.Component {
             <Route path="/map">
               <MapPage changeActive={(page) => this.changeActive(page)} />
             </Route>
-            <Route path="/about">
-              {/* TODO: Change this link */}
-              <HomePage />
-            </Route>
-            <Route path="/contact">
-              {/* TODO: Change this link */}
-              <HomePage />
-            </Route>
-            <Route path="/dietary_prefences">
+            <Route path="/about">{/* TODO: Change this link */}</Route>
+            <Route path="/contact">{/* TODO: Change this link */}</Route>
+            <Route path="/dietary-preferences">
               <DietaryPage />
             </Route>
             <Route path="*">

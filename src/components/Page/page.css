@@ -1,9 +1,10 @@
 .entire-page {
   display: grid;
-  height: auto;
+  height: 100%;
+  min-height: 90vh;
   padding: 0px 5vw 30px 5vw;
-  grid-template-columns: auto;
-  grid-template-rows: 140px auto auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px auto;
   grid-template-areas:
     "title"
     "body";

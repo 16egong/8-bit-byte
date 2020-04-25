@@ -49,7 +49,7 @@ const RegisterPage = () => {
           label="Register"
           backgroundColor="#efc326"
           textColor="white"
-          to="#"
+          to="/dietary-preferences"
         />
         <p>
           Already have an account?{" "}
