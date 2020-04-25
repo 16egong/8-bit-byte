@@ -1,12 +1,12 @@
 .entire-page {
   display: grid;
   height: 100%;
+  padding: 0px 5vw;
   grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-rows: 140px auto auto;
   grid-template-areas:
     "header"
-    "body"
-    "footer";
+    "body";
 }
 
 .login-divider {
@@ -20,4 +20,11 @@
   height: 3px;
   background-color: white;
   margin: 5px 10px;
+}
+
+.page-content-container {
+  grid-area: body;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }

@@ -1,6 +1,6 @@
 .byte-button {
   min-width: 208px;
-  min-height: 57px;
+  height: 58px;
   background-color: white;
   border-radius: 15px;
   display: flex;

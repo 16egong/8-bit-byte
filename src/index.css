@@ -12,7 +12,12 @@ code {
     monospace;
 }
 
+p {
+  margin: 5px;
+}
+
 :root {
   --grey-text: #929292;
   --byte-orange: #f4a41b;
+  --byte-gold: #efc326;
 }
