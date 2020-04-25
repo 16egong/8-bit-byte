@@ -8,7 +8,7 @@ class Page extends Component {
     return (
       <div
         className="entire-page"
-        style={{ backgroundColor: { backgroundColor } }}
+        style={{ backgroundColor: backgroundColor }}
       >
         <Title title={title} subtitle={subtitle} />
       </div>
