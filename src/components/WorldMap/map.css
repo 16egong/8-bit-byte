@@ -1,0 +1,51 @@
+.map-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  gap: 50px;
+  justify-content: center;
+  width: 80%;
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.map-region-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 270px;
+  width: 270px;
+  border-radius: 12px;
+  background-color: whitesmoke;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.map-region-inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 244px;
+  min-height: 140px;
+  background-color: rgb(219, 219, 219);
+  border-radius: 12px;
+}
+
+.map-region-info {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.map-region-info .goblin-text {
+  margin: 8px;
+  text-decoration: underline;
+  font-weight: 300;
+}
+
+.region-image {
+  width: 195px;
+  height: auto;
+  object-fit: cover;
+}

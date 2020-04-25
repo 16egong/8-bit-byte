@@ -1,7 +1,13 @@
 import React from "react";
-import { HomePage, LoginPage, RegisterPage, DietaryPage } from "./components/Page";
+import {
+  HomePage,
+  LoginPage,
+  RegisterPage,
+  MapPage,
+  DietaryPage,
+} from "./components/Page";
 import Page404 from "./components/Page/Page404";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 // Style imports
 import "./fonts/A Goblin Appears.otf";
@@ -12,43 +18,47 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      load: 0,
+      active: "home",
     };
   }
+
+  changeActive = (active) => {
+    this.setState({ active });
+  };
 
   render() {
     return (
       <Router>
         {/* Header goes here */}
-        <Header />
+        <Header
+          active={this.state.active}
+          changeActive={(page) => this.changeActive(page)}
+        />
         {/* Controls the actual routing section */}
-        <body>
+        <div className="body">
           <Switch>
             <Route exact path="/">
-              <HomePage />
+              <HomePage changeActive={(page) => this.changeActive(page)} />
             </Route>
             <Route path="/login">
-              <LoginPage />
+              <LoginPage changeActive={(page) => this.changeActive(page)} />
             </Route>
             <Route path="/register">
-              <RegisterPage />
+              <RegisterPage changeActive={(page) => this.changeActive(page)} />
             </Route>
-            <Route path="/about">
-              {/* TODO: Change this link */}
-              <HomePage />
+            <Route path="/map">
+              <MapPage changeActive={(page) => this.changeActive(page)} />
             </Route>
-            <Route path="/contact">
-              {/* TODO: Change this link */}
-              <HomePage />
-            </Route>
-            <Route path="/dietary_prefences">
+            <Route path="/about">{/* TODO: Change this link */}</Route>
+            <Route path="/contact">{/* TODO: Change this link */}</Route>
+            <Route path="/dietary-preferences">
               <DietaryPage />
             </Route>
             <Route path="*">
-              <Page404 />
+              <Page404 changeActive={(page) => this.changeActive(page)} />
             </Route>
           </Switch>
-        </body>
+        </div>
 
         <Footer />
       </Router>

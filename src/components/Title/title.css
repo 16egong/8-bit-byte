@@ -1,14 +1,13 @@
 .page-title {
+  grid-area: title;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
   align-items: center;
 }
 
 .page-title-container {
-  position: absolute;
-  top: 0;
-  grid-area: header;
+  position: relative;
+  /* top: 0; */
   background-color: orange;
   width: min(650px, 60%);
   min-width: 400px;
@@ -24,7 +23,7 @@
 
 .page-subtitle-container {
   position: relative;
-  top: -30px;
+  top: -12px;
   background-color: white;
   border-radius: 15px;
   border-color: transparent;
@@ -35,6 +34,7 @@
   align-items: center;
   /* Label Settings */
   font-weight: bolder;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-family: Arial;
   color: var(--byte-orange);
 }

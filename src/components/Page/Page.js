@@ -6,11 +6,9 @@ class Page extends Component {
   render() {
     let { title, subtitle, backgroundColor } = this.props;
     return (
-      <div
-        className="entire-page"
-        style={{ backgroundColor: backgroundColor }}
-      >
+      <div className="entire-page" style={{ backgroundColor: backgroundColor }}>
         <Title title={title} subtitle={subtitle} />
+        {this.props.children}
       </div>
     );
   }

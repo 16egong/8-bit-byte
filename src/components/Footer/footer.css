@@ -1,7 +1,7 @@
 .footer {
   grid-area: footer;
   height: max(10vh, 360px);
-  color: var(--grey-text);
+  color: var(--byte-grey);
   background-color: whitesmoke;
   border-top: 3px solid #777777;
   box-shadow: inset 0px 3px 5px #00000030;

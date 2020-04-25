@@ -1,9 +1,9 @@
 import React from "react";
 import "./footer.css";
 // Icons
-import FacebookIcon from "../assets/icons/Facebook Icon.png";
-import TwitterIcon from "../assets/icons/Twitter Icon.png";
-import PinterestIcon from "../assets/icons/Pinterest Icon.png";
+import FacebookIcon from "../../assets/icons/Facebook Icon.png";
+import TwitterIcon from "../../assets/icons/Twitter Icon.png";
+import PinterestIcon from "../../assets/icons/Pinterest Icon.png";
 
 const styles = {
   icon: {

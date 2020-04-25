@@ -1,8 +1,9 @@
 import React from "react";
-import NavButton from "../ByteButton";
+import ByteLink from "../ByteButton";
 import "./page.css";
 
-const HomePage = () => {
+const HomePage = (props) => {
+  console.log(props);
   return (
     <div className="login-hero">
       <div style={{ marginBottom: 60 }}>
@@ -13,13 +14,25 @@ const HomePage = () => {
           Cook a bit -> Eat a bite.
         </h3>
       </div>
-      <NavButton to="/register" label="Register" onClick={() => {}} />
+      <ByteLink
+        to="/register"
+        label="Register"
+        onClick={() => {
+          props.changeActive("register");
+        }}
+      />
       <div className="login-divider">
         <div className="login-divider-line"></div>
         <p className="goblin-text">OR</p>
         <div className="login-divider-line"></div>
       </div>
-      <NavButton to="/login" label="Login" onClick={() => {}} />
+      <ByteLink
+        to="/login"
+        label="Login"
+        onClick={() => {
+          props.changeActive("login");
+        }}
+      />
     </div>
   );
 };

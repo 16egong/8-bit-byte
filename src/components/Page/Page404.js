@@ -1,4 +1,5 @@
 import React from "react";
+import ByteButton from "../ByteButton";
 
 const Page404 = () => {
   return (
@@ -13,6 +14,13 @@ const Page404 = () => {
         <h3 className="goblin-text" style={{ textAlign: "center" }}>
           This page doesn't exist yet.
         </h3>
+        <ByteButton
+          to="/"
+          label="Back to Home"
+          onClick={() => {
+            this.props.changeActive("home");
+          }}
+        />
       </div>
     </div>
   );
