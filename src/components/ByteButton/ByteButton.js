@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./button.css";
+import "./link.css";
 
 const ByteButton = (props) => {
-  let { backgroundColor, textColor } = props;
+  let { backgroundColor, textColor, to } = props;
   return (
     <Link
-      to={props.to}
+      to={to}
       className="byte-button"
       style={{ backgroundColor: backgroundColor, color: textColor }}
-      onClick={() => props.onClick()}
+      onClick={() => {
+        if (props.onClick !== undefined) props.onClick();
+      }}
     >
       {props.label}
     </Link>

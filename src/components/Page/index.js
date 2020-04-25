@@ -1,12 +1,9 @@
 import React from "react";
 import Page from "./Page";
 import Home from "./HomePage";
+import Map from "../WorldMap/";
 import ByteButton from "../ByteButton";
 import { Link } from "react-router-dom";
-
-const HomePage = () => {
-  return <Home />;
-};
 
 const LoginPage = () => {
   return (
@@ -20,7 +17,7 @@ const LoginPage = () => {
           label="Login"
           backgroundColor="#efc326"
           textColor="white"
-          onClick={() => alert("Goes to World Map")}
+          to="/map"
         />
         <p>
           Don't have an account?{" "}
@@ -30,7 +27,9 @@ const LoginPage = () => {
         </p>
         <p>
           Forgot your password/username?{" "}
-          <Link style={{ color: "#efc326" }}>Click Here!</Link>
+          <Link to="#" style={{ color: "#efc326" }}>
+            Click Here!
+          </Link>
         </p>
       </div>
     </Page>
@@ -49,7 +48,7 @@ const RegisterPage = () => {
           label="Register"
           backgroundColor="#efc326"
           textColor="white"
-          onClick={() => alert("Goes to Dietary Preferences")}
+          to="#"
         />
         <p>
           Already have an account?{" "}
@@ -62,5 +61,19 @@ const RegisterPage = () => {
   );
 };
 
-export { HomePage, LoginPage, RegisterPage };
+const MapPage = () => {
+  return (
+    <Page
+      title="World Map"
+      subtitle="Choose a location"
+      backgroundColor="#f2ecec"
+    >
+      <div className="page-content-container">
+        <Map />
+      </div>
+    </Page>
+  );
+};
+
+export { Home as HomePage, LoginPage, RegisterPage, MapPage };
 export default Page;

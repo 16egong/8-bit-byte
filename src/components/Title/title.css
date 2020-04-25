@@ -24,7 +24,7 @@
 
 .page-subtitle-container {
   position: relative;
-  bottom: -40px;
+  top: 30px;
   background-color: white;
   border-radius: 15px;
   border-color: transparent;
@@ -35,6 +35,7 @@
   align-items: center;
   /* Label Settings */
   font-weight: bolder;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-family: Arial;
   color: var(--byte-orange);
 }

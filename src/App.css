@@ -17,13 +17,13 @@
   font-family: "A Goblin Appears";
 }
 
-body {
+.body {
   position: relative;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(180deg, #efc326 0%, #ff5c00 100%);
 }
 
-body > .login-hero {
+.body > .login-hero {
   color: white;
   display: flex;
   height: 100%;
