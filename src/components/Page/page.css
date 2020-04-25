@@ -28,3 +28,11 @@
   flex-flow: column nowrap;
   align-items: center;
 }
+
+.diet-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  margin: 10px;
+}

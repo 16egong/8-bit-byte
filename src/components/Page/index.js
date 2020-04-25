@@ -4,6 +4,7 @@ import Home from "./HomePage";
 import Map from "../WorldMap/";
 import ByteButton from "../ByteButton";
 import { Link } from "react-router-dom";
+import Diet from "./DietaryPage";
 
 const LoginPage = () => {
   return (
@@ -75,5 +76,15 @@ const MapPage = () => {
   );
 };
 
-export { Home as HomePage, LoginPage, RegisterPage, MapPage };
+const DietaryPage = () => {
+  return (
+    <Diet
+      title="Dietary Preferences"
+      subtitle="Choose dietary preferences"
+      backgroundColor="#FFD953"
+    />
+  );
+};
+
+export { Home as HomePage, LoginPage, RegisterPage, MapPage, DietaryPage };
 export default Page;

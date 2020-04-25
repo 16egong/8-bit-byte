@@ -1,5 +1,11 @@
 import React from "react";
-import { HomePage, LoginPage, RegisterPage, MapPage } from "./components/Page";
+import {
+  HomePage,
+  LoginPage,
+  RegisterPage,
+  MapPage,
+  DietaryPage,
+} from "./components/Page";
 import Page404 from "./components/Page/Page404";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -50,6 +56,9 @@ class App extends React.Component {
             <Route path="/contact">
               {/* TODO: Change this link */}
               <HomePage />
+            </Route>
+            <Route path="/dietary_prefences">
+              <DietaryPage />
             </Route>
             <Route path="*">
               <Page404 changeActive={(page) => this.changeActive(page)} />

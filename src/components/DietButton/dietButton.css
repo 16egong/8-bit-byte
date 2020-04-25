@@ -1,0 +1,65 @@
+.diet-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px;
+}
+
+
+
+.diet-button:hover .circle, .diet-button:hover .text-area{
+    cursor: pointer;
+    background-color: #ff5c00;
+    color: white;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.circle.active{
+    cursor: pointer;
+    background-color: #ff5e00d7;
+    color: white;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+.text-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background: #FFFFFF;
+
+    margin: -5px;
+    padding: 5px;
+    min-width: 100px;
+    max-width: 150px;
+    border-radius: 15px;
+    
+    
+    border-color: transparent;
+    /* Label Settings */
+    color: #ff5c00;
+    font-size: 18px;
+    /* font-family: "A Goblin Appears"; */
+    text-decoration: none;
+
+}
+.text-area.active{
+    cursor: pointer;
+    background-color: #ff5e00d7;
+    color: white;
+}
