@@ -1,7 +1,7 @@
 import React from "react";
 import { HomePage, LoginPage, RegisterPage } from "./components/Page";
 import Page404 from "./components/Page/Page404";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 // Style imports
 import "./fonts/A Goblin Appears.otf";
