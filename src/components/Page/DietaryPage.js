@@ -26,6 +26,12 @@ function DietaryPage(props) {
                     <VeganButton />
                     <VeganButton />
                 </div>
+                <div className="diet-row">
+                    <VeganButton />
+                    <VegetarianButton />
+                    <VeganButton />
+                    <VeganButton />
+                </div>
             </div>
         </div>
     );
