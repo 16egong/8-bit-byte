@@ -5,6 +5,7 @@ import Map from "../WorldMap/";
 import ByteButton from "../ByteButton";
 import { Link } from "react-router-dom";
 import Diet from "./DietaryPage";
+import Recipe from "../Recipe"
 
 const LoginPage = () => {
   return (
@@ -86,5 +87,19 @@ const DietaryPage = () => {
   );
 };
 
-export { Home as HomePage, LoginPage, RegisterPage, MapPage, DietaryPage };
+const RecipePage = () => {
+  return (
+    <Page
+      title="Beginner Recipe "
+      subtitle= "Asian Cuisine" //change later to props
+      backgroundColor="#f2ecec"
+    >
+      <div className="page-content-container">
+        <Recipe/>
+      </div>
+    </Page>
+  );
+};
+
+export { Home as HomePage, LoginPage, RegisterPage, MapPage, DietaryPage, RecipePage };
 export default Page;
