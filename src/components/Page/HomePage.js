@@ -24,7 +24,7 @@ const HomePage = (props) => {
       <div className="login-divider">
         <div className="login-divider-line"></div>
         <p className="goblin-text">OR</p>
-        <div className="login-divider-line"></div>
+        <div className="login-divider-line"></div>n
       </div>
       <ByteLink
         to="/login"

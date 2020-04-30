@@ -30,10 +30,24 @@
   align-items: center;
 }
 
+.diet-buttons {
+  position: fixed;
+  right:50px;
+  top:150px;
+}
+
 .diet-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
 
   margin: 10px;
+}
+
+.load-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 20%;
 }

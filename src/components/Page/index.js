@@ -1,11 +1,14 @@
-import React from "react";
+import React from 'react';
+import { Link } from "react-router-dom";
+
 import Page from "./Page";
+import Load from "./LoadingPage"
+import Diet from "./DietaryPage";
 import Home from "./HomePage";
 import Map from "../WorldMap/";
-import ByteButton from "../ByteButton";
-import { Link } from "react-router-dom";
-import Diet from "./DietaryPage";
 import Recipe from "../Recipe"
+import ByteButton from "../ByteButton";
+
 
 const LoginPage = () => {
   return (
@@ -63,6 +66,24 @@ const RegisterPage = () => {
   );
 };
 
+const DietaryPage = () => {
+  return (
+    <Page
+      title="Dietary Preferences"
+      subtitle="Choose dietary preferences"
+      backgroundColor="#FFD953"
+    >
+      <div className="page-content-container">
+        <Diet/>
+      </div>
+    </Page>
+  );
+};
+
+const LoadingPage = () => {
+  return <Load />
+}
+
 const MapPage = () => {
   return (
     <Page
@@ -77,20 +98,10 @@ const MapPage = () => {
   );
 };
 
-const DietaryPage = () => {
-  return (
-    <Diet
-      title="Dietary Preferences"
-      subtitle="Choose dietary preferences"
-      backgroundColor="#FFD953"
-    />
-  );
-};
-
 const RecipePage = () => {
   return (
     <Page
-      title="Beginner Recipe "
+      title="Beginner Recipe"
       subtitle= "Asian Cuisine" //change later to props
       backgroundColor="#f2ecec"
     >
@@ -101,5 +112,5 @@ const RecipePage = () => {
   );
 };
 
-export { Home as HomePage, LoginPage, RegisterPage, MapPage, DietaryPage, RecipePage };
+export { Home as HomePage, LoginPage, RegisterPage, DietaryPage, LoadingPage, MapPage, RecipePage };
 export default Page;

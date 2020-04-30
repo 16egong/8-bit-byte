@@ -3,8 +3,9 @@ import {
   HomePage,
   LoginPage,
   RegisterPage,
-  MapPage,
+  LoadingPage,
   DietaryPage,
+  MapPage,
   RecipePage
 } from "./components/Page";
 import Page404 from "./components/Page/Page404";
@@ -41,21 +42,26 @@ class App extends React.Component {
             <Route exact path="/">
               <HomePage changeActive={(page) => this.changeActive(page)} />
             </Route>
+            <Route path="/about">{/* TODO: Change this link */}
+            </Route>
+            <Route path="/contact">{/* TODO: Change this link */}</Route>
             <Route path="/login">
               <LoginPage changeActive={(page) => this.changeActive(page)} />
             </Route>
             <Route path="/register">
               <RegisterPage changeActive={(page) => this.changeActive(page)} />
             </Route>
+            <Route path="/loading">
+              <LoadingPage changeActive={(page) => this.changeActive(page)} />
+            </Route>
+            <Route path="/dietary-preferences">
+              <DietaryPage changeActive={(page) => this.changeActive(page)}/>
+            </Route>
             <Route path="/map">
               <MapPage changeActive={(page) => this.changeActive(page)} />
             </Route>
-            <Route path="/about">{/* TODO: Change this link */}
-            <RecipePage/> {/* change later */}
-            </Route>
-            <Route path="/contact">{/* TODO: Change this link */}</Route>
-            <Route path="/dietary-preferences">
-              <DietaryPage />
+            <Route path="/recipe">
+              <RecipePage changeActive={(page) => this.changeActive(page)} />
             </Route>
             <Route path="*">
               <Page404 changeActive={(page) => this.changeActive(page)} />
