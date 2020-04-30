@@ -1,65 +1,64 @@
 .diet-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+  width: 180px;
+  cursor: pointer;
 }
 
-
-
-.diet-button:hover .circle, .diet-button:hover .text-area{
-    cursor: pointer;
-    background-color: #ff5c00;
-    color: white;
+.diet-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  box-shadow: 3px 3px rgb(97, 97, 97);
+  z-index: 5;
+  transition: background-color 0.05s ease-out;
 }
 
-.circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #FFFFFF;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
+.diet-icon {
+  width: 100px;
+  height: 100px;
 }
 
-.circle.active{
-    cursor: pointer;
-    background-color: #ff5e00d7;
-    color: white;
+.diet-text-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+  background-color: white;
+  padding: 5px;
+  min-width: 120px;
+  min-height: 23px;
+  border-radius: 15px;
+  border-color: transparent;
+  z-index: 10;
+  /* Label Settings */
+  color: var(--byte-orange);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "Arial";
+  transition: background-color 0.05s ease-out;
+  box-shadow: 3px 3px rgb(97, 97, 97);
 }
 
-.icon {
-    width: 100px;
-    height: 100px;
+.diet-active {
+  background-color: var(--byte-orange);
+  color: white;
+  box-shadow: inset 3px 2px rgb(156, 98, 10);
+}
+.diet-text-area.diet-active {
+  z-index: 4;
 }
 
-.text-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    background: #FFFFFF;
-
-    margin: -5px;
-    padding: 5px;
-    min-width: 100px;
-    max-width: 150px;
-    border-radius: 15px;
-    
-    
-    border-color: transparent;
-    /* Label Settings */
-    color: #ff5c00;
-    font-size: 18px;
-    /* font-family: "A Goblin Appears"; */
-    text-decoration: none;
-
-}
-.text-area.active{
-    cursor: pointer;
-    background-color: #ff5e00d7;
-    color: white;
+.diet-button:hover .diet-circle,
+.diet-button:hover .diet-text-area {
+  background-color: var(--byte-orange);
+  color: white;
 }
