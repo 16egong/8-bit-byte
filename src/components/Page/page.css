@@ -30,10 +30,23 @@
   align-items: center;
 }
 
-.diet-buttons {
+.diet-button-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 180px);
+  gap: 20px;
+  justify-content: center;
+  width: 80%;
+  max-width: 750px;
+  margin: auto;
+  border: 4px dashed var(--byte-orange);
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.diet-side-menu-buttons {
   position: fixed;
-  right:50px;
-  top:150px;
+  right: 20px;
+  top: 100px;
 }
 
 .diet-row {

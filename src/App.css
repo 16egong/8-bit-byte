@@ -47,5 +47,5 @@
 
 @font-face {
   font-family: "A Goblin Appears";
-  src: local("A Goblin Appears"), url("./fonts/A\ Goblin\ Appears.otf");
+  src: local("A Goblin Appears"), url("assets/fonts/A\ Goblin\ Appears.otf");
 }

@@ -6,13 +6,13 @@ import {
   LoadingPage,
   DietaryPage,
   MapPage,
-  RecipePage
+  RecipePage,
 } from "./components/Page";
 import Page404 from "./components/Page/Page404";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 // Style imports
-import "./fonts/A Goblin Appears.otf";
+import "./assets/fonts/A Goblin Appears.otf";
 import "./App.css";
 import Header from "./components/Header";
 
@@ -42,8 +42,7 @@ class App extends React.Component {
             <Route exact path="/">
               <HomePage changeActive={(page) => this.changeActive(page)} />
             </Route>
-            <Route path="/about">{/* TODO: Change this link */}
-            </Route>
+            <Route path="/about">{/* TODO: Change this link */}</Route>
             <Route path="/contact">{/* TODO: Change this link */}</Route>
             <Route path="/login">
               <LoginPage changeActive={(page) => this.changeActive(page)} />
@@ -55,7 +54,7 @@ class App extends React.Component {
               <LoadingPage changeActive={(page) => this.changeActive(page)} />
             </Route>
             <Route path="/dietary-preferences">
-              <DietaryPage changeActive={(page) => this.changeActive(page)}/>
+              <DietaryPage changeActive={(page) => this.changeActive(page)} />
             </Route>
             <Route path="/map">
               <MapPage changeActive={(page) => this.changeActive(page)} />
