@@ -16,7 +16,7 @@
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  box-shadow: 3px 3px rgb(131, 131, 131);
+  box-shadow: 3px 3px rgb(97, 97, 97);
   z-index: 5;
   transition: background-color 0.05s ease-out;
 }
@@ -45,7 +45,7 @@
   text-decoration: none;
   font-family: "Arial";
   transition: background-color 0.05s ease-out;
-  box-shadow: 3px 3px rgb(131, 131, 131);
+  box-shadow: 3px 3px rgb(97, 97, 97);
 }
 
 .diet-active {
