@@ -1,9 +1,20 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { getAction } from "../../redux/reducers/appReducer";
+import {
+  USER_LOGGED_IN,
+  USER_LOGGED_OUT,
+  CHANGE_ACTIVE_PAGE,
+} from "../../redux/actionTypes";
 import "./header.css";
 
-export default class Header extends Component {
+class Header extends Component {
   render() {
+    // These are the dispatch methods
+    let { changeActivePage, activePage } = this.props;
+    // These are from the Redux store
+    let { login, logout, loggedIn } = this.props;
     return (
       <nav className="header">
         <div className="logo">
@@ -13,37 +24,28 @@ export default class Header extends Component {
         <nav className="navbar">
           <NavLink
             className={
-              "navlink" +
-              (this.props.active === "home" ? " navlink-selected" : "")
+              "navlink" + (activePage === "home" ? " navlink-selected" : "")
             }
             to="/"
-            onClick={() => {
-              this.props.changeActive("home");
-            }}
+            onClick={() => changeActivePage("home")}
           >
             Home
           </NavLink>
           <NavLink
             className={
-              "navlink" +
-              (this.props.active === "about" ? " navlink-selected" : "")
+              "navlink" + (activePage === "about" ? " navlink-selected" : "")
             }
             to="/about"
-            onClick={() => {
-              this.props.changeActive("about");
-            }}
+            onClick={() => changeActivePage("about")}
           >
             About
           </NavLink>
           <NavLink
             className={
-              "navlink" +
-              (this.props.active === "contact" ? " navlink-selected" : "")
+              "navlink" + (activePage === "contact" ? " navlink-selected" : "")
             }
             to="/contact"
-            onClick={() => {
-              this.props.changeActive("contact");
-            }}
+            onClick={() => changeActivePage("contact")}
           >
             Contact
           </NavLink>
@@ -52,3 +54,28 @@ export default class Header extends Component {
     );
   }
 }
+
+// Ask me (Kevin) if you don't know how to use this stuff please!
+// These state and dispatch methods are made available through props
+const mapStateToProps = (state) => {
+  return {
+    loggedIn: state.loggedIn,
+    activePage: state.activePage,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    login: () => {
+      dispatch(getAction(USER_LOGGED_IN));
+    },
+    logout: () => {
+      dispatch(getAction(USER_LOGGED_OUT));
+    },
+    changeActivePage: (page) => {
+      dispatch(getAction(CHANGE_ACTIVE_PAGE, page));
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
