@@ -14,7 +14,7 @@ class Header extends Component {
     // These are the dispatch methods
     let { changeActivePage, activePage } = this.props;
     // These are from the Redux store
-    let { login, logout, loggedIn } = this.props;
+    let { logout, loggedIn } = this.props;
     return (
       <nav className="header">
         <div className="logo">
@@ -66,9 +66,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    login: () => {
-      dispatch(getAction(USER_LOGGED_IN));
-    },
     logout: () => {
       dispatch(getAction(USER_LOGGED_OUT));
     },

@@ -1,43 +1,16 @@
 import React from "react";
+import { connect } from "react-redux";
+import { getAction } from "../../redux/reducers";
+import {
+  CHANGE_DIETARY_PREFERENCE,
+  CHANGE_ACTIVE_PAGE,
+} from "../../redux/actionTypes";
 import DietButton from "../DietButton";
-import "./page.css";
 import ByteButton from "../ByteButton";
-// import vegan from "../../assets/imgs/vegan.png";
-
+import "./page.css";
 class DietaryPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      buttons: [
-        { type: "vegan", active: false },
-        { type: "vegetarian", active: false },
-        { type: "kosher", active: false },
-        { type: "spicy", active: false },
-        { type: "low fat", active: false },
-        { type: "no nuts", active: false },
-        { type: "gluten free", active: false },
-        { type: "organic", active: false },
-        { type: "halal", active: false },
-      ],
-    };
-  }
-
-  getActive = (type) => {
-    for (let button of this.state.buttons) {
-      if (button.type === type) {
-        return button.active;
-      }
-    }
-  };
-
-  toggleActive = (type) => {
-    let newButtons = this.state.buttons.map((x) =>
-      x.type === type ? { type: x.type, active: !x.active } : x
-    );
-    this.setState({ buttons: newButtons });
-  };
-
   render() {
+    let { preferences, changeDietaryPref } = this.props;
     return (
       <div style={{ width: "100%" }}>
         <div className="diet-side-menu-buttons">
@@ -60,66 +33,48 @@ class DietaryPage extends React.Component {
         <div className="diet-button-section">
           <DietButton
             type="vegan"
-            active={this.getActive("vegan")}
-            onClick={() => {
-              this.toggleActive("vegan");
-            }}
+            active={preferences.vegan}
+            onClick={() => changeDietaryPref("vegan")}
           />
           <DietButton
             type="vegetarian"
-            active={this.getActive("vegetarian")}
-            onClick={() => {
-              this.toggleActive("vegetarian");
-            }}
+            active={preferences.vegetarian}
+            onClick={() => changeDietaryPref("vegetarian")}
           />
           <DietButton
             type="kosher"
-            active={this.getActive("kosher")}
-            onClick={() => {
-              this.toggleActive("kosher");
-            }}
+            active={preferences.kosher}
+            onClick={() => changeDietaryPref("kosher")}
           />
           <DietButton
             type="spicy"
-            active={this.getActive("spicy")}
-            onClick={() => {
-              this.toggleActive("spicy");
-            }}
+            active={preferences.spicy}
+            onClick={() => changeDietaryPref("spicy")}
           />
           <DietButton
-            type="low fat"
-            active={this.getActive("low fat")}
-            onClick={() => {
-              this.toggleActive("low fat");
-            }}
+            type="lowfat"
+            active={preferences.lowfat}
+            onClick={() => changeDietaryPref("lowfat")}
           />
           <DietButton
-            type="no nuts"
-            active={this.getActive("no nuts")}
-            onClick={() => {
-              this.toggleActive("no nuts");
-            }}
+            type="nonuts"
+            active={preferences.nonuts}
+            onClick={() => changeDietaryPref("nonuts")}
           />
           <DietButton
             type="halal"
-            active={this.getActive("halal")}
-            onClick={() => {
-              this.toggleActive("halal");
-            }}
+            active={preferences.halal}
+            onClick={() => changeDietaryPref("halal")}
           />
           <DietButton
             type="organic"
-            active={this.getActive("organic")}
-            onClick={() => {
-              this.toggleActive("organic");
-            }}
+            active={preferences.organic}
+            onClick={() => changeDietaryPref("organic")}
           />
           <DietButton
-            type="gluten free"
-            active={this.getActive("gluten free")}
-            onClick={() => {
-              this.toggleActive("gluten free");
-            }}
+            type="glutenfree"
+            active={preferences.glutenfree}
+            onClick={() => changeDietaryPref("glutenfree")}
           />
         </div>
       </div>
@@ -127,4 +82,22 @@ class DietaryPage extends React.Component {
   }
 }
 
-export default DietaryPage;
+const mapStateToProps = (state) => {
+  let user = state.user;
+  return {
+    preferences: user.preferences,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeDietaryPref: (pref) => {
+      dispatch(getAction(CHANGE_DIETARY_PREFERENCE, pref));
+    },
+    changeActivePage: (page) => {
+      dispatch(getAction(CHANGE_ACTIVE_PAGE, page));
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(DietaryPage);
