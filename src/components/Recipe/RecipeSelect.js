@@ -1,7 +1,6 @@
 import React from "react";
 import "./Recipe.css";
 import BoiledWater from "../../assets/images/recipeimages/boilwater.png";
-import RecipeItem from "./RecipeItem";
 
 const styles = {
   pic: {
@@ -10,7 +9,7 @@ const styles = {
   },
 };
 
-const RecipeSelectionPage = () => {
+const RecipeSelect = () => {
   return (
     <div className="recipe">
       <div className="row">
@@ -165,4 +164,4 @@ const RecipeSelectionPage = () => {
   );
 };
 
-export default RecipeSelectionPage;
+export default RecipeSelect;
