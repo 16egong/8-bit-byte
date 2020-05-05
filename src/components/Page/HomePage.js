@@ -3,7 +3,6 @@ import ByteLink from "../ByteButton";
 import "./page.css";
 
 const HomePage = (props) => {
-  console.log(props);
   return (
     <div className="login-hero">
       <div style={{ marginBottom: 60 }}>

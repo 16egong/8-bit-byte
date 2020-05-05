@@ -1,45 +1,25 @@
-import React, { useState } from 'react';
+import React from "react";
 import "./dietButton.css";
 
-
-
 function DietButton(props) {
-    const [isActive, setIsActive] = useState(false);
-        if (isActive) {
-            console.log(`ACTIVE1: ${isActive}`)
-            return (
-                <div className="diet-button" onClick={() => setIsActive(!isActive)}>
-                    <div className="circle active">
-                        <img className="icon" src={props.img} alt="props.text" />
-                    </div>
-                    <div className="text-area active">
-                        {props.text}
-                    </div>
-
-                </div>);
-        } else {
-            console.log(`ACTIVE2: ${isActive}`)
-            return (
-                <div className="diet-button" onClick={() => setIsActive(!isActive)}>
-                    <div className="circle">
-                        <img className="icon" src={props.img} alt="props.text" />
-                    </div>
-                    <div className="text-area">
-                        {props.text}
-                    </div>
-                </div>
-            );
-            
-        }
+  let { type, active } = props;
+  return (
+    <div className="diet-button" onClick={() => props.onClick()}>
+      <div className={"diet-circle" + (active ? " diet-active" : "")}>
+        {console.log(props.src)}
+        <img
+          className="diet-icon"
+          src={require(`../../assets/images/${props.src}`)}
+          alt={`icon representing dietary preference for ${type}`}
+        />
+      </div>
+      <div className={"diet-text-area" + (active ? " diet-active" : "")}>
+        {type
+          .split(" ")
+          .map((type) => type.charAt(0).toUpperCase() + type.slice(1))}
+      </div>
+    </div>
+  );
 }
-
-function saveDiet () {
-    console.log('CLICKED')
-    var circle = document.getElementsByClassName("circle")
-    var text_area = document.getElementsByClassName("text-area")
-    circle.style.backgroundColor = "#ff5c00"
-    text_area.style.backgroundColor = "#ff5c00"
-} 
-
 
 export default DietButton;
