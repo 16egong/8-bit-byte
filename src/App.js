@@ -7,7 +7,7 @@ import {
   LoadingPage,
   DietaryPage,
   MapPage,
-  RecipePage,
+  RecipeSelectionPage,
 } from "./components/Page";
 import Page404 from "./components/Page/Page404";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -61,7 +61,7 @@ class App extends React.Component {
                 <MapPage changeActive={(page) => this.changeActive(page)} />
               </Route>
               <Route path="/recipe">
-                <RecipePage changeActive={(page) => this.changeActive(page)} />
+                <RecipeSelectionPage changeActive={(page) => this.changeActive(page)} />
               </Route>
               <Route path="*">
                 <Page404 changeActive={(page) => this.changeActive(page)} />
