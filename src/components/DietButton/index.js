@@ -9,7 +9,7 @@ const DietButton = (props) => {
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/vegan.png"
           active={props.active}
           onClick={props.onClick}
         />
@@ -41,7 +41,7 @@ const DietButton = (props) => {
           onClick={props.onClick}
         />
       );
-    case "low fat":
+    case "lowfat":
       return (
         <Diet
           type={type}
@@ -50,7 +50,7 @@ const DietButton = (props) => {
           onClick={props.onClick}
         />
       );
-    case "no nuts":
+    case "nonuts":
       return (
         <Diet
           type={type}
@@ -77,7 +77,7 @@ const DietButton = (props) => {
           onClick={props.onClick}
         />
       );
-    case "gluten free":
+    case "glutenfree":
       return (
         <Diet
           type={type}
@@ -87,7 +87,14 @@ const DietButton = (props) => {
         />
       );
     default:
-      return <Diet type="Error" src={"error.png"} active={false} />;
+      return (
+        <Diet
+          type="Error"
+          src={"error.png"}
+          active={false}
+          onClick={() => {}}
+        />
+      );
   }
 };
 

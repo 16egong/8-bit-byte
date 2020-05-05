@@ -1,9 +1,27 @@
 import React from "react";
+import { connect } from "react-redux";
+import { getAction } from "../../redux/reducers";
+import { CHANGE_ACTIVE_PAGE } from "../../redux/actionTypes";
 import ByteLink from "../ByteButton";
 import "./page.css";
 
-const HomePage = (props) => {
-  return (
+const HomePage = ({ username, loggedIn, changeActivePage }) => {
+  return loggedIn ? (
+    <div className="login-hero">
+      <div style={{ marginBottom: 60 }}>
+        <h1 className="goblin-text" style={{ textAlign: "center" }}>
+          8 Bit Byte
+        </h1>
+        <h3 className="goblin-text" style={{ textAlign: "center" }}>
+          Cook a bit -> Eat a bite.
+        </h3>
+      </div>
+      <p>
+        Hello {username}, you are logged in.
+        <br /> Go start a new recipe!
+      </p>
+    </div>
+  ) : (
     <div className="login-hero">
       <div style={{ marginBottom: 60 }}>
         <h1 className="goblin-text" style={{ textAlign: "center" }}>
@@ -16,9 +34,7 @@ const HomePage = (props) => {
       <ByteLink
         to="/register"
         label="Register"
-        onClick={() => {
-          props.changeActive("register");
-        }}
+        onClick={() => changeActivePage("register")}
       />
       <div className="login-divider">
         <div className="login-divider-line"></div>
@@ -29,11 +45,26 @@ const HomePage = (props) => {
         to="/login"
         label="Login"
         onClick={() => {
-          props.changeActive("login");
+          changeActivePage("login");
         }}
       />
     </div>
   );
 };
 
-export default HomePage;
+const mapStateToProps = (state) => {
+  return {
+    username: state.user.name,
+    loggedIn: state.loggedIn,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeActivePage: (page) => {
+      dispatch(getAction(CHANGE_ACTIVE_PAGE, page));
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

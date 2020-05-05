@@ -64,3 +64,34 @@
   height: auto;
   width: 20%;
 }
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 60%;
+  box-sizing: border-box;
+}
+
+.login-container label {
+  color: var(--byte-orange);
+  font-size: 1.5rem;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.login-input {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  box-sizing: border-box;
+}

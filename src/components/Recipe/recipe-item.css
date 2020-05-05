@@ -1,0 +1,39 @@
+.recipe-item-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.recipe-item-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  background-color: var(--byte-orange);
+  border-radius: 10px;
+  padding: 10px 1rem;
+  box-sizing: border-box;
+}
+
+.recipe-item-title-container p {
+  color: white;
+  font-family: "Arial";
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.recipe-item-player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+  width: 90%;
+  border-radius: 20px;
+  border: 8px solid gold;
+  overflow: hidden;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
