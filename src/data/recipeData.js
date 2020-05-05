@@ -1,65 +1,60 @@
-let recipesData = [
-    {
-      name: "Boiled Water",
-      description: [
-        "A lot of fusion foods from many cultures",
-        "Lots of regional cooking styles",
-        "Corn products are a primary ingredient",
-        "Features many meats and oils",
-      ],
-      src: "America.png",
-    },
-    {
-      name: "Cooked Rice",
-      description: [
-        "Meat is prominent in meals",
-        "Uses many dairy products",
-        "Features bread, pasta, and other starches",
-        "Salads are a big part of cuisine",
-      ],
-      src: "Europe.png",
-    },
-    {
-      name: "Chopped Garlic",
-      description: [
-        "Uses a lot of pork and chicken products",
-        "Incorporates a lot of spices and sauces",
-        "Prioritizes fresh herbs & ingredients",
-        "Uses many types of vegetables and oils",
-      ],
-      src: "Asia.png",
-    },
-    {
-      name: "Cutting Veggies",
-      description: [
-        "A lot of fusion foods from many cultures",
-        "Lots of regional cooking styles",
-        "Corn products are a primary ingredient",
-        "Features many meats and oils",
-      ],
-      src: "Asia.png",
-    },
-    {
-      name: "Stir Fried Rice",
-      description: [
-        "Meat is prominent in meals",
-        "Uses many dairy products",
-        "Features bread, pasta, and other starches",
-        "Salads are a big part of cuisine",
-      ],
-      src: "America.png",
-    },
-    {
-      name: "Chopped Onions",
-      description: [
-        "Uses a lot of pork and chicken products",
-        "Incorporates a lot of spices and sauces",
-        "Prioritizes fresh herbs & ingredients",
-        "Uses many types of vegetables and oils",
-      ],
-      src: "Europe.png",
-    },
-  ];
-  
-  export default recipesData;
-  
+let recipesData = {
+  asian: {
+    easy: [
+      {
+        title: "Boiled Water",
+        description: "Learn to boil water",
+        difficulty: "Easy",
+        experience: "10 XP",
+        src: "America.png",
+      },
+      {
+        title: "Cooked Rice",
+        description: "Learn to cook rice",
+        difficulty: "Easy",
+        experience: "10 XP",
+        src: "America.png",
+      },
+      {
+        title: "Chopped Garlic",
+        description: "Learn how to chop garlic",
+        difficulty: "Easy",
+        experience: "10 XP",
+        src: "America.png",
+      },
+    ],
+    medium: [
+      {
+        title: "Cutting Veggies",
+        description: "Learn how to cut vegetables",
+        difficulty: "Easy",
+        experience: "10 XP",
+        src: "America.png",
+      },
+      {
+        title: "Stir Fried Rice",
+        description: "Get started with an easy to make stir fried rice dish",
+        difficulty: "Easy",
+        experience: "10 XP",
+        src: "America.png",
+      },
+      {
+        title: "Chopped Onions",
+        description: "Learn how to chop onions",
+        difficulty: "Easy",
+        experience: "10 XP",
+        src: "America.png",
+      },
+    ]
+  },
+
+  american: {
+
+  },
+
+  european: {
+
+  }
+}
+
+export default recipesData;

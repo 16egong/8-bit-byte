@@ -98,7 +98,7 @@ const MapPage = () => {
   );
 };
 
-const RecipePage = () => {
+const RecipeSelectionPage = () => {
   return (
     <Page
       title="Beginner Recipe"
@@ -112,5 +112,5 @@ const RecipePage = () => {
   );
 };
 
-export { Home as HomePage, LoginPage, RegisterPage, DietaryPage, LoadingPage, MapPage, RecipePage };
+export { Home as HomePage, LoginPage, RegisterPage, DietaryPage, LoadingPage, MapPage, RecipeSelectionPage };
 export default Page;

@@ -9,7 +9,7 @@ const styles = {
   },
 };
 
-const RecipeSelectionPage = () => {
+const RecipeSelect = () => {
   return (
     <div className="recipe">
       <div className="row">
@@ -164,4 +164,4 @@ const RecipeSelectionPage = () => {
   );
 };
 
-export default RecipeSelectionPage;
+export default RecipeSelect;
