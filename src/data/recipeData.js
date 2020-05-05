@@ -1,6 +1,6 @@
-let recipes = [
+let recipesData = [
     {
-      name: "America",
+      name: "Boiled Water",
       description: [
         "A lot of fusion foods from many cultures",
         "Lots of regional cooking styles",
@@ -10,7 +10,7 @@ let recipes = [
       src: "America.png",
     },
     {
-      name: "Europe",
+      name: "Cooked Rice",
       description: [
         "Meat is prominent in meals",
         "Uses many dairy products",
@@ -20,7 +20,7 @@ let recipes = [
       src: "Europe.png",
     },
     {
-      name: "E. Asia",
+      name: "Chopped Garlic",
       description: [
         "Uses a lot of pork and chicken products",
         "Incorporates a lot of spices and sauces",
@@ -30,7 +30,7 @@ let recipes = [
       src: "Asia.png",
     },
     {
-      name: "America v2",
+      name: "Cutting Veggies",
       description: [
         "A lot of fusion foods from many cultures",
         "Lots of regional cooking styles",
@@ -40,7 +40,7 @@ let recipes = [
       src: "Asia.png",
     },
     {
-      name: "Europa",
+      name: "Stir Fried Rice",
       description: [
         "Meat is prominent in meals",
         "Uses many dairy products",
@@ -50,7 +50,7 @@ let recipes = [
       src: "America.png",
     },
     {
-      name: "W. Asia",
+      name: "Chopped Onions",
       description: [
         "Uses a lot of pork and chicken products",
         "Incorporates a lot of spices and sauces",
@@ -61,5 +61,5 @@ let recipes = [
     },
   ];
   
-  export default recipes;
+  export default recipesData;
   

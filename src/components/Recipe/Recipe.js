@@ -121,8 +121,11 @@ const RecipePage = () => {
       </p>
         </div>
       </div>
+<<<<<<< Updated upstream
       <hr style={{ border: "3px #7C7C7C solid" 
       }}/>
+=======
+>>>>>>> Stashed changes
     </div>
   );
 }
