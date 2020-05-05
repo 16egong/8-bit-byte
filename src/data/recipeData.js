@@ -51,16 +51,12 @@ let recipeData = {
         src: "choppedonions.png",
         id: 5,
       },
-    ]
+    ],
   },
 
-  american: {
+  american: {},
 
-  },
-
-  european: {
-
-  }
-}
+  european: {},
+};
 
 export default recipeData;

@@ -2,9 +2,17 @@ import React from "react";
 import RecipeSelect from "./RecipeSelect";
 import recipeData from "../../data/recipeData";
 import "./Recipe.css";
+import BoiledWater from "../../assets/images/recipeimages/boilwater.png";
+import RecipeItem from "./RecipeItem";
+
+const styles = {
+  pic: {
+    width: "auto",
+    height: "auto",
+  },
+};
 
 const RecipeSelectionPage = (props) => {
-  //gunna need props to associate page to cuisine type
   return (
     <div>
       <div className="recipe-container">
@@ -25,9 +33,9 @@ const RecipeSelectionPage = (props) => {
       <br />
       <hr style={{ border: "3px #7C7C7C solid" }} />
       <div className="recipe-level">
-      <h2 className="goblin-text" style={{ textAlign: "center" }}>
-        Medium Recipes
-      </h2>
+        <h2 className="goblin-text" style={{ textAlign: "center" }}>
+          Medium Recipes
+        </h2>
       </div>
       <div className="recipe-container">
         {recipeData.asian.medium.map((r, n) => {
@@ -44,7 +52,6 @@ const RecipeSelectionPage = (props) => {
           );
         })}
       </div>
-      <hr style={{ border: "3px #7C7C7C solid" }} />
     </div>
   );
 };

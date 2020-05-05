@@ -6,7 +6,6 @@ function DietButton(props) {
   return (
     <div className="diet-button" onClick={() => props.onClick()}>
       <div className={"diet-circle" + (active ? " diet-active" : "")}>
-        {console.log(props.src)}
         <img
           className="diet-icon"
           src={require(`../../assets/images/${props.src}`)}
