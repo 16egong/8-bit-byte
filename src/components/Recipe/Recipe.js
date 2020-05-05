@@ -1,6 +1,7 @@
 import React from "react";
 import "./Recipe.css";
 import BoiledWater from "../../assets/images/recipeimages/boilwater.png";
+import RecipeItem from "./RecipeItem";
 
 const styles = {
   pic: {
