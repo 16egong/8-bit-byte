@@ -3,19 +3,8 @@ import RecipeSelect from "./RecipeSelect";
 import recipeData from "../../data/recipeData";
 import "./Recipe.css";
 
-<<<<<<< Updated upstream
-const styles = {
-  pic: {
-    width: "auto",
-    height: "auto",
-  },
-};
-
-const RecipePage = () => {
-=======
 const RecipeSelectionPage = (props) => {
   //gunna need props to associate page to cuisine type
->>>>>>> Stashed changes
   return (
     <div>
       <div className="recipe-container">
@@ -60,4 +49,4 @@ const RecipeSelectionPage = (props) => {
   );
 };
 
-export default RecipePage;
+export default RecipeSelectionPage;
