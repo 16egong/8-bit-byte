@@ -1,17 +1,32 @@
-.row {
+.recipe-select-container {
+  text-decoration: none;
+  color: #000000;
+  display: grid;
+  flex-flow: column nowrap;
+  grid-template-columns: repeat(auto-fill, 270px);
+  gap: 20px;
+  align-items: center;
+  /* height: 270px;
+  width: 270px; */
+  border-radius: 12px;
+  padding: 30px;
+  margin: 60px;
+  background-color: whitesmoke;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.recipe-container {
   display: flex;
-  padding: 25px;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  
 }
 
-.column {
-  flex: 33.33%;
-
-}
-
-.recipe-name {
+/* .recipe-name {
 height: 15px;
 top: 13px;
-
 font-family: Roboto;
 font-style: normal;
 font-weight: bold;
@@ -19,19 +34,49 @@ font-size: 30px;
 line-height: 35px;
 text-align: center;
 letter-spacing: 0.01em;
-}
+} */
 
-.recipe-instruction {
+.recipe-info-container {
   font-size: 14px;
 line-height: 16px;
 text-align: center;
 letter-spacing: 0.01em;
+top: 13px;
 }
 
 .cuisine-type {
   border-radius: 20px;
 }
 
-img {
-  width:100%;
+.recipe-select-image {
+  align-self: center;
+}
+
+.recipe-text-container .goblin-text {
+  text-align: center;
+  margin: 8px;
+  text-decoration: underline;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.recipe-level {
+  position: relative;
+  background-color: orange;
+  width: min(650px, 60%);
+  min-width: 400px;
+  height: 90px;
+  align-self: center;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  /* Label Settings */
+  color: white;
+  margin: auto;
+  /*top: -10px;
+  bottom: 20px;*/
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  top: -8px;
 }

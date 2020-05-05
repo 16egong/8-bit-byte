@@ -1,60 +1,62 @@
-let recipesData = {
+let recipeData = {
   asian: {
     easy: [
       {
         title: "Boiled Water",
         description: "Learn to boil water",
-        difficulty: "Easy",
+        difficulty: "Difficulty: Easy",
         experience: "10 XP",
-        src: "America.png",
+        src: "boilwater.png",
+        id: 0,
       },
       {
         title: "Cooked Rice",
         description: "Learn to cook rice",
-        difficulty: "Easy",
+        difficulty: "Difficulty: Easy",
         experience: "10 XP",
-        src: "America.png",
+        src: "cookedrice.png",
+        id: 1,
       },
       {
         title: "Chopped Garlic",
         description: "Learn how to chop garlic",
-        difficulty: "Easy",
+        difficulty: "Difficulty: Easy",
         experience: "10 XP",
-        src: "America.png",
+        src: "choppedgarlic.png",
+        id: 2,
       },
     ],
     medium: [
       {
         title: "Cutting Veggies",
         description: "Learn how to cut vegetables",
-        difficulty: "Easy",
+        difficulty: "Difficulty: Easy",
         experience: "10 XP",
-        src: "America.png",
+        src: "cutveggies.png",
+        id: 3,
       },
       {
         title: "Stir Fried Rice",
         description: "Get started with an easy to make stir fried rice dish",
-        difficulty: "Easy",
+        difficulty: "Difficulty: Easy",
         experience: "10 XP",
-        src: "America.png",
+        src: "stirfriedrice.png",
+        id: 4,
       },
       {
         title: "Chopped Onions",
         description: "Learn how to chop onions",
-        difficulty: "Easy",
+        difficulty: "Difficulty: Easy",
         experience: "10 XP",
-        src: "America.png",
+        src: "choppedonions.png",
+        id: 5,
       },
-    ]
+    ],
   },
 
-  american: {
+  american: {},
 
-  },
+  european: {},
+};
 
-  european: {
-
-  }
-}
-
-export default recipesData;
+export default recipeData;
