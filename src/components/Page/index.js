@@ -9,7 +9,8 @@ import Register from "./RegisterPage";
 import Home from "./HomePage";
 import Map from "../WorldMap/";
 import Recipe from "../Recipe";
-import ByteButton from "../ByteButton";
+import About from "./AboutPage";
+import Contact from "./ContactPage";
 
 const LoginPage = () => {
   return (
@@ -89,5 +90,7 @@ export {
   LoadingPage,
   MapPage,
   RecipeSelectionPage,
+  About as AboutPage,
+  Contact as ContactPage,
 };
 export default Page;
