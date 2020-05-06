@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Profile from "./Profile";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getAction } from "../../redux/reducers/appReducer";
@@ -8,8 +9,14 @@ import {
   CHANGE_ACTIVE_PAGE,
 } from "../../redux/actionTypes";
 import "./header.css";
+import ProfileDropdown from "./Profile/Profile";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+
   render() {
     // These are the dispatch methods
     let { changeActivePage, activePage } = this.props;
@@ -50,6 +57,7 @@ class Header extends Component {
             Contact
           </NavLink>
         </nav>
+        <Profile/>
       </nav>
     );
   }
