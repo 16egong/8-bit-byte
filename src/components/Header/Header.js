@@ -67,7 +67,7 @@ class Header extends Component {
             </NavLink>
           ) : null}
         </nav>
-        <Profile />
+        {loggedIn ? <Profile /> : null}
       </nav>
     );
   }

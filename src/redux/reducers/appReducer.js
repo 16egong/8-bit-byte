@@ -21,6 +21,8 @@ const initialState = {
       organic: false,
       glutenfree: false,
     },
+    xp: 0,
+    recipes: 0,
   },
 };
 
