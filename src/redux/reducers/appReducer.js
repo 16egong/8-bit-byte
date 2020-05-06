@@ -3,6 +3,8 @@ import {
   USER_LOGGED_OUT,
   CHANGE_ACTIVE_PAGE,
   CHANGE_DIETARY_PREFERENCE,
+  USER_COMPLETED_RECIPE,
+  ADD_EXPERIENCE_POINTS,
 } from "../actionTypes";
 
 const initialState = {
@@ -59,6 +61,22 @@ let reducers = (state = initialState, action) => {
             ...state.user.preferences,
             [action.payload]: !state.user.preferences[action.payload],
           },
+        },
+      };
+    case USER_COMPLETED_RECIPE:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          recipes: state.user.recipes + 1,
+        },
+      };
+    case ADD_EXPERIENCE_POINTS:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          xp: state.user.xp + action.payload,
         },
       };
     default:

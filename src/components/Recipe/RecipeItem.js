@@ -1,13 +1,19 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import { useParams } from "react-router-dom";
+import { connect } from "react-redux";
+import {
+  ADD_EXPERIENCE_POINTS,
+  USER_COMPLETED_RECIPE,
+} from "../../redux/actionTypes";
+import { getAction } from "../../redux/reducers";
 import allRecipes from "../../data/allRecipes";
 import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 import SocialShare from "../SocialShare";
 import "./recipe-item.css";
 
-const RecipeItem = () => {
+const RecipeItem = ({ completeRecipe, addExperience }) => {
   let { recipeID } = useParams();
   let recipe = allRecipes[recipeID];
   if (recipe !== undefined) {
@@ -67,7 +73,10 @@ const RecipeItem = () => {
           <SocialShare />
           <div
             className="recipe-item-xp-button"
-            onClick={() => alert("You got XP!")}
+            onClick={() => {
+              addExperience(recipe.xp);
+              completeRecipe();
+            }}
           >
             <FA icon={faUtensils} size="1x" />
             <p>I Made It!</p>
@@ -84,4 +93,11 @@ const RecipeItem = () => {
   }
 };
 
-export default RecipeItem;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    completeRecipe: () => dispatch(getAction(USER_COMPLETED_RECIPE)),
+    addExperience: (xp) => dispatch(getAction(ADD_EXPERIENCE_POINTS, xp)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(RecipeItem);
