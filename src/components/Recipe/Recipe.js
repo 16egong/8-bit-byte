@@ -1,58 +1,72 @@
 import React from "react";
 import RecipeSelect from "./RecipeSelect";
 import recipeData from "../../data/recipeData";
+import {
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from "react-router-dom";
+import Title from "../Title";
 import "./Recipe.css";
-import BoiledWater from "../../assets/images/recipeimages/boilwater.png";
 import RecipeItem from "./RecipeItem";
 
-const styles = {
-  pic: {
-    width: "auto",
-    height: "auto",
-  },
-};
-
 const RecipeSelectionPage = (props) => {
+  let match = useRouteMatch();
+  let { cuisine } = useParams();
   return (
-    <div>
-      <div className="recipe-container">
-        {recipeData.asian.easy.map((r, n) => {
-          return (
-            <RecipeSelect
-              key={n}
-              title={r.title}
-              description={r.description}
-              difficulty={r.difficulty}
-              experience={r.experience}
-              src={r.src}
-              id={r.id}
-            />
-          );
-        })}
-      </div>
-      <br />
-      <hr style={{ border: "3px #7C7C7C solid" }} />
-      <div className="recipe-level">
-        <h2 className="goblin-text" style={{ textAlign: "center" }}>
-          Medium Recipes
-        </h2>
-      </div>
-      <div className="recipe-container">
-        {recipeData.asian.medium.map((r, n) => {
-          return (
-            <RecipeSelect
-              key={n}
-              title={r.title}
-              description={r.description}
-              difficulty={r.difficulty}
-              experience={r.experience}
-              src={r.src}
-              id={r.id}
-            />
-          );
-        })}
-      </div>
-    </div>
+    <Switch>
+      <Route path={`${match.path}/:recipeID`}>
+        <RecipeItem />
+      </Route>
+      <Route path={match.path}>
+        <div className="recipe-level-divider">
+          <hr style={{ border: "3px #7C7C7C solid" }} />
+          <Title title="Easy Recipes" subtitle={`${cuisine} Cuisine`} />
+        </div>
+        <div className="recipe-container">
+          {recipeData.asian.easy.map((r, n) => {
+            return (
+              <Link
+                to={`${match.url}/${r.id}`}
+                style={{ textDecoration: "none" }}
+              >
+                <RecipeSelect
+                  key={n}
+                  title={r.title}
+                  description={r.description}
+                  difficulty={r.difficulty}
+                  experience={r.experience}
+                  src={r.src}
+                  id={r.id}
+                />
+              </Link>
+            );
+          })}
+        </div>
+        <br />
+        <div className="recipe-level-divider">
+          <hr style={{ border: "3px #7C7C7C solid" }} />
+          <Title title="Medium Recipes" subtitle={`${cuisine} Cuisine`} />
+        </div>
+        <div className="recipe-container">
+          {recipeData.asian.medium.map((r, n) => {
+            return (
+              <RecipeSelect
+                key={n}
+                title={r.title}
+                description={r.description}
+                difficulty={r.difficulty}
+                experience={r.experience}
+                src={r.src}
+                id={r.id}
+              />
+            );
+          })}
+        </div>
+      </Route>
+    </Switch>
   );
 };
 

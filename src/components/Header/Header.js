@@ -49,6 +49,17 @@ class Header extends Component {
           >
             Contact
           </NavLink>
+          {loggedIn ? (
+            <NavLink
+              className={
+                "navlink" + (activePage === "map" ? " navlink-selected" : "")
+              }
+              to="/map"
+              onClick={() => changeActivePage("map")}
+            >
+              World Map
+            </NavLink>
+          ) : null}
         </nav>
       </nav>
     );

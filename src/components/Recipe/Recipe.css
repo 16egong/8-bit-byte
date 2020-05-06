@@ -1,27 +1,23 @@
 .recipe-select-container {
   text-decoration: none;
   color: #000000;
-  display: grid;
+  display: flex;
   flex-flow: column nowrap;
-  grid-template-columns: repeat(auto-fill, 270px);
-  gap: 20px;
   align-items: center;
   /* height: 270px;
   width: 270px; */
   border-radius: 12px;
-  padding: 30px;
-  margin: 60px;
+  padding: 20px;
+  margin: 0px 10px;
+  max-width: 250px;
   background-color: whitesmoke;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 .recipe-container {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: white;
+  justify-content: space-between;
   border-radius: 15px;
-  
 }
 
 /* .recipe-name {
@@ -38,10 +34,10 @@ letter-spacing: 0.01em;
 
 .recipe-info-container {
   font-size: 14px;
-line-height: 16px;
-text-align: center;
-letter-spacing: 0.01em;
-top: 13px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  top: 13px;
 }
 
 .cuisine-type {
@@ -52,31 +48,41 @@ top: 13px;
   align-self: center;
 }
 
-.recipe-text-container .goblin-text {
+.recipe-text-container {
   text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
   margin: 8px;
-  text-decoration: underline;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 1.5em;
+  text-decoration: none;
 }
 
-.recipe-level {
-  position: relative;
-  background-color: orange;
-  width: min(650px, 60%);
-  min-width: 400px;
-  height: 90px;
-  align-self: center;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  /* Label Settings */
-  color: white;
-  margin: auto;
-  /*top: -10px;
-  bottom: 20px;*/
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  top: -8px;
+.recipe-text-container #title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  font-family: "Arial";
+  line-height: 1.5em;
+  margin: 8px;
+}
+
+.recipe-text-container .experience {
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin: 3px;
+}
+
+.recipe-level-divider {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.recipe-level-divider hr {
+  margin: 0px;
+}
+
+.recipe-level-divider > h2 {
+  color: var(--byte-grey);
+  font-size: 2rem;
+  margin-bottom: 2px;
+  margin-left: 20px;
 }

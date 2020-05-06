@@ -2,6 +2,8 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .recipe-item-title-container {
@@ -14,6 +16,7 @@
   border-radius: 10px;
   padding: 10px 1rem;
   box-sizing: border-box;
+  box-shadow: 0px 8px 10px #a7a7a7b2;
 }
 
 .recipe-item-title-container p {
@@ -23,17 +26,63 @@
   font-size: 1.5rem;
 }
 
+.recipe-item-share-xp-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin-top: 100px;
+}
+
 .recipe-item-player-wrapper {
   position: relative;
-  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+  /* padding-top: 56.25%;  */
+  /* Player ratio: 100 / (1280 / 720) */
   width: 90%;
   border-radius: 20px;
   border: 8px solid gold;
   overflow: hidden;
+  height: 75vh;
+  max-width: 1200px;
 }
 
 .react-player {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.recipe-item-ingredients-list,
+.recipe-item-instructions-list {
+  width: 90%;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.recipe-item-ingredient {
+  display: flex;
+  align-items: center;
+}
+
+.recipe-item-ingredient > input {
+  margin: 0px;
+}
+
+.recipe-item-ingredient > p {
+  font-size: 1.3rem;
+  margin: 10px;
+}
+
+.recipe-item-xp-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(247, 188, 78);
+  border-radius: 50px;
+  padding: 10px 40px;
+  color: white;
+  min-width: 220px;
+  font-size: 2.5rem;
+  box-shadow: 0px 6px 0px #eda326;
+  cursor: pointer;
 }

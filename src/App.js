@@ -60,8 +60,10 @@ class App extends React.Component {
               <Route path="/map">
                 <MapPage changeActive={(page) => this.changeActive(page)} />
               </Route>
-              <Route path="/recipe">
-                <RecipeSelectionPage changeActive={(page) => this.changeActive(page)} />
+              <Route path="/recipe/:cuisine">
+                <RecipeSelectionPage
+                  changeActive={(page) => this.changeActive(page)}
+                />
               </Route>
               <Route path="*">
                 <Page404 changeActive={(page) => this.changeActive(page)} />
