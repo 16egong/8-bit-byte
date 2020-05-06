@@ -12,6 +12,7 @@ let allRecipes = {
     url: "https://www.youtube.com/watch?v=kieGBkOdyMU",
     servings: 1,
     difficulty: "Easy",
+    xp: 10,
   },
   1: {
     // Cooked Rice
@@ -34,6 +35,7 @@ let allRecipes = {
     url: "https://www.youtube.com/watch?v=wGWFlN6e4Mk",
     servings: 2,
     difficulty: "Easy",
+    xp: 10,
   },
   2: {
     // Cooked Rice
@@ -51,6 +53,7 @@ let allRecipes = {
     url: "https://www.youtube.com/watch?v=4FflIEjWGT8",
     servings: 1,
     difficulty: "Easy",
+    xp: 20,
   },
 };
 

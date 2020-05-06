@@ -2,7 +2,7 @@ import React from "react";
 import "./Recipe.css";
 
 const RecipeSelect = (props) => {
-  let { title, description, difficulty, experience, src, id } = props;
+  let { title, description, difficulty, experience, src } = props;
   return (
     <div className="recipe-select-container">
       <img
@@ -14,7 +14,7 @@ const RecipeSelect = (props) => {
         <h6 id="title">{title}</h6>
         <p id="description">{description}</p>
         <p className="experience">{difficulty}</p>
-        <p className="experience">{experience}</p>
+        <p className="experience">{experience} XP</p>
       </div>
     </div>
   );
