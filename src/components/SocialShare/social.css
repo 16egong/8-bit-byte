@@ -1,0 +1,38 @@
+.social-container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 200px;
+  justify-content: space-around;
+  margin: 10px 30px;
+  box-sizing: border-box;
+}
+
+.social-container > h1 {
+  color: var(--byte-grey);
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.social-icons-container {
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+  margin: 10px 10px 10px 0px;
+  box-sizing: border-box;
+}
+
+.social-youtube {
+  color: #eb3223;
+}
+
+.social-facebook {
+  color: #4968ad;
+}
+
+.social-pinterest {
+  color: red;
+}
+
+.social-instagram {
+  color: grey;
+}

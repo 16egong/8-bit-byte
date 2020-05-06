@@ -8,6 +8,7 @@ let regions = [
       "Features many meats and oils",
     ],
     src: "America.png",
+    cuisine: "American",
   },
   {
     name: "Europe",
@@ -18,6 +19,7 @@ let regions = [
       "Salads are a big part of cuisine",
     ],
     src: "Europe.png",
+    cuisine: "European",
   },
   {
     name: "E. Asia",
@@ -28,6 +30,7 @@ let regions = [
       "Uses many types of vegetables and oils",
     ],
     src: "Asia.png",
+    cuisine: "Asian",
   },
   {
     name: "America v2",
@@ -38,6 +41,7 @@ let regions = [
       "Features many meats and oils",
     ],
     src: "Asia.png",
+    cuisine: "American v2",
   },
   {
     name: "Europa",
@@ -48,6 +52,7 @@ let regions = [
       "Salads are a big part of cuisine",
     ],
     src: "America.png",
+    cuisine: "Europa",
   },
   {
     name: "W. Asia",
@@ -58,6 +63,7 @@ let regions = [
       "Uses many types of vegetables and oils",
     ],
     src: "Europe.png",
+    cuisine: "W. Asian",
   },
 ];
 

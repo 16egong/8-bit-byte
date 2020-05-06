@@ -1,168 +1,73 @@
 import React from "react";
+import RecipeSelect from "./RecipeSelect";
+import recipeData from "../../data/recipeData";
+import {
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from "react-router-dom";
+import Title from "../Title";
 import "./Recipe.css";
-import BoiledWater from "../../assets/images/recipeimages/boilwater.png";
+import RecipeItem from "./RecipeItem";
 
-const styles = {
-  pic: {
-    width: "auto",
-    height: "auto",
-  },
-};
-
-const RecipePage = () => {
+const RecipeSelectionPage = (props) => {
+  let match = useRouteMatch();
+  let { cuisine } = useParams();
   return (
-    <div className="recipe">
-      <div className="row">
-        <div className="column">
-          <img src={BoiledWater} alt="water" style={styles.pic} />
-          <h1 className="recipe-name">Boiled Water</h1>
-          <p className="recipe-instruction">
-            A description about stuff that this thing is about. Yea, cool!
-            <br />
-            <br />
-            <br />
-            <br />
-            Difficulty: Easy
-            <br />
-            <br />
-            Earn: 10 XP
-          </p>
+    <Switch>
+      <Route path={`${match.path}/:recipeID`}>
+        <RecipeItem />
+      </Route>
+      <Route path={match.path}>
+        <div className="recipe-level-divider">
+          <hr style={{ border: "3px #7C7C7C solid" }} />
+          <Title title="Easy Recipes" subtitle={`${cuisine} Cuisine`} />
         </div>
-        <div className="column">
-          <img src={BoiledWater} alt="water" style={styles.pic} />
-          <h1 className="recipe-name">Boiled Water</h1>
-          <p className="recipe-instruction">
-            A description about stuff that this thing is about. Yea, cool!
-            <br />
-            <br />
-            <br />
-            <br />
-            Difficulty: Easy
-            <br />
-            <br />
-            Earn: 10 XP
-          </p>
+        <div className="recipe-container">
+          {recipeData.asian.easy.map((r, n) => {
+            return (
+              <Link
+                to={`${match.url}/${r.id}`}
+                style={{ textDecoration: "none" }}
+              >
+                <RecipeSelect
+                  key={n}
+                  title={r.title}
+                  description={r.description}
+                  difficulty={r.difficulty}
+                  experience={r.experience}
+                  src={r.src}
+                  id={r.id}
+                />
+              </Link>
+            );
+          })}
         </div>
-        <div className="column">
-          <img src={BoiledWater} alt="water" style={styles.pic} />
-          <h1 className="recipe-name">Boiled Water</h1>
-          <p className="recipe-instruction">
-            A description about stuff that this thing is about. Yea, cool!
-            <br />
-            <br />
-            <br />
-            <br />
-            Difficulty: Easy
-            <br />
-            <br />
-            Earn: 10 XP
-          </p>
+        <br />
+        <div className="recipe-level-divider">
+          <hr style={{ border: "3px #7C7C7C solid" }} />
+          <Title title="Medium Recipes" subtitle={`${cuisine} Cuisine`} />
         </div>
-      </div>
-      <hr style={{ border: "3px #7C7C7C solid" }} />
-      <h1 className="recipe-level" style={{ textAlign: "center" }}>
-        Easy Recipe
-      </h1>
-      <h3 className="cuisine-type" style={{ textAlign: "center" }}>
-        Asian Cuisine
-      </h3>
-      <div className="row">
-        <div className="column">
-          <img src={BoiledWater} alt="water" style={styles.pic} />
-          <h1 className="recipe-name">Boiled Water</h1>
-          <p className="recipe-instruction">
-            A description about stuff that this thing is about. Yea, cool!
-            <br />
-            <br />
-            <br />
-            <br />
-            Difficulty: Easy
-            <br />
-            <br />
-            Earn: 10 XP
-          </p>
+        <div className="recipe-container">
+          {recipeData.asian.medium.map((r, n) => {
+            return (
+              <RecipeSelect
+                key={n}
+                title={r.title}
+                description={r.description}
+                difficulty={r.difficulty}
+                experience={r.experience}
+                src={r.src}
+                id={r.id}
+              />
+            );
+          })}
         </div>
-        <div className="column">
-          <img src={BoiledWater} alt="water" style={styles.pic} />
-          <h1 className="recipe-name">Boiled Water</h1>
-          <p className="recipe-instruction">
-            A description about stuff that this thing is about. Yea, cool!
-            <br />
-            <br />
-            <br />
-            <br />
-            Difficulty: Easy
-            <br />
-            <br />
-            Earn: 10 XP
-          </p>
-        </div>
-        <div className="column">
-          <img src={BoiledWater} alt="water" style={styles.pic} />
-          <h1 className="recipe-name">Boiled Water</h1>
-          <p className="recipe-instruction">
-            A description about stuff that this thing is about. Yea, cool!
-            <br />
-            <br />
-            <br />
-            <br />
-            Difficulty: Easy
-            <br />
-            <br />
-            Earn: 10 XP
-          </p>
-        </div>
-      </div>
-      <div className="row">
-        <div className="column">
-          <img src={BoiledWater} alt="water" style={styles.pic} />
-          <h1 className="recipe-name">Boiled Water</h1>
-          <p className="recipe-instruction">
-            A description about stuff that this thing is about. Yea, cool!
-            <br />
-            <br />
-            <br />
-            <br />
-            Difficulty: Easy
-            <br />
-            <br />
-            Earn: 10 XP
-          </p>
-        </div>
-        <div className="column">
-          <img src={BoiledWater} alt="water" style={styles.pic} />
-          <h1 className="recipe-name">Boiled Water</h1>
-          <p className="recipe-instruction">
-            A description about stuff that this thing is about. Yea, cool!
-            <br />
-            <br />
-            <br />
-            <br />
-            Difficulty: Easy
-            <br />
-            <br />
-            Earn: 10 XP
-          </p>
-        </div>
-        <div className="column">
-          <img src={BoiledWater} alt="water" style={styles.pic} />
-          <h1 className="recipe-name">Boiled Water</h1>
-          <p className="recipe-instruction">
-            A description about stuff that this thing is about. Yea, cool!
-            <br />
-            <br />
-            <br />
-            <br />
-            Difficulty: Easy
-            <br />
-            <br />
-            Earn: 10 XP
-          </p>
-        </div>
-      </div>
-      <hr style={{ border: "3px #7C7C7C solid" }} />
-    </div>
+      </Route>
+    </Switch>
   );
 };
 
-export default RecipePage;
+export default RecipeSelectionPage;
