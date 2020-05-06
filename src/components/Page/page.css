@@ -95,3 +95,22 @@
   border-radius: 15px;
   box-sizing: border-box;
 }
+
+.contact-container {
+  border-radius: 25px;
+  color: white;
+  height: 70vh;
+  margin: 30px 40px 30px 40px;
+  /* display: flex; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "A Goblin Appears";
+}
+
+.contact-text {
+  margin-top: 50px;
+  line-height: 50px;
+  text-align: left;
+  margin-left: 200px;
+}
