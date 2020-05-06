@@ -16,7 +16,6 @@ class Header extends Component {
     super(props);
   }
 
-
   render() {
     // These are the dispatch methods
     let { changeActivePage, activePage } = this.props;
@@ -57,7 +56,7 @@ class Header extends Component {
             Contact
           </NavLink>
         </nav>
-        <Profile/>
+        <Profile />
       </nav>
     );
   }
@@ -76,9 +75,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     login: () => {
       dispatch(getAction(USER_LOGGED_IN));
-    },
-    logout: () => {
-      dispatch(getAction(USER_LOGGED_OUT));
     },
     changeActivePage: (page) => {
       dispatch(getAction(CHANGE_ACTIVE_PAGE, page));
