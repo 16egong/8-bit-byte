@@ -8,10 +8,17 @@ class Page extends Component {
     return (
       <div
         className="entire-page"
-        style={{
-          backgroundColor: backgroundColor,
-          gridTemplateRows: noTitle ? "auto" : "150px auto",
-        }}
+        style={Object.assign(
+          {
+            backgroundColor: backgroundColor,
+          },
+          noTitle
+            ? {
+                gridTemplateRows: "auto",
+                gridTemplateAreas: "'body'",
+              }
+            : {}
+        )}
       >
         {!noTitle ? <Title title={title} subtitle={subtitle} /> : null}
         {this.props.children}

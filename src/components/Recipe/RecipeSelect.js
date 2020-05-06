@@ -1,6 +1,5 @@
 import React from "react";
 import "./Recipe.css";
-import BoiledWater from "../../assets/images/recipeimages/boilwater.png";
 
 const RecipeSelect = (props) => {
   let { title, description, difficulty, experience, src, id } = props;
@@ -12,17 +11,10 @@ const RecipeSelect = (props) => {
         alt="boiling water"
       />
       <div className="recipe-text-container">
-        <h6 className="goblin-text">{title}</h6>
-        <p className="recipe-info-container">
-          {description}
-          <br />
-          <br />
-          <br />
-          {difficulty}
-          <br />
-          <br />
-          {experience}
-        </p>
+        <h6 id="title">{title}</h6>
+        <p id="description">{description}</p>
+        <p className="experience">{difficulty}</p>
+        <p className="experience">{experience}</p>
       </div>
     </div>
   );

@@ -73,11 +73,7 @@ const MapPage = () => {
 
 const RecipeSelectionPage = () => {
   return (
-    <Page
-      title="Beginner Recipe"
-      subtitle="Asian Cuisine" //change later to props
-      backgroundColor="#f2ecec"
-    >
+    <Page noTitle backgroundColor="#f2ecec">
       <div className="page-content-container">
         <Recipe />
       </div>

@@ -1,15 +1,21 @@
 import React, { Component } from "react";
+import Profile from "./Profile";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { getAction } from "../../redux/reducers/appReducer";
+import { getAction } from "../../redux/reducers";
 import {
   USER_LOGGED_IN,
   USER_LOGGED_OUT,
   CHANGE_ACTIVE_PAGE,
 } from "../../redux/actionTypes";
 import "./header.css";
+import ProfileDropdown from "./Profile/Profile";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     // These are the dispatch methods
     let { changeActivePage, activePage } = this.props;
@@ -49,7 +55,19 @@ class Header extends Component {
           >
             Contact
           </NavLink>
+          {loggedIn ? (
+            <NavLink
+              className={
+                "navlink" + (activePage === "map" ? " navlink-selected" : "")
+              }
+              to="/map"
+              onClick={() => changeActivePage("map")}
+            >
+              World Map
+            </NavLink>
+          ) : null}
         </nav>
+        {loggedIn ? <Profile /> : null}
       </nav>
     );
   }
