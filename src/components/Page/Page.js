@@ -4,10 +4,23 @@ import "./page.css";
 
 class Page extends Component {
   render() {
-    let { title, subtitle, backgroundColor } = this.props;
+    let { title, subtitle, backgroundColor, noTitle } = this.props;
     return (
-      <div className="entire-page" style={{ backgroundColor: backgroundColor }}>
-        <Title title={title} subtitle={subtitle} />
+      <div
+        className="entire-page"
+        style={Object.assign(
+          {
+            backgroundColor: backgroundColor,
+          },
+          noTitle
+            ? {
+                gridTemplateRows: "auto",
+                gridTemplateAreas: "'body'",
+              }
+            : {}
+        )}
+      >
+        {!noTitle ? <Title title={title} subtitle={subtitle} /> : null}
         {this.props.children}
       </div>
     );

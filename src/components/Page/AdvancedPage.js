@@ -7,41 +7,49 @@ class AdvancedPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      buttons: [
-        { type: "vegan", active: false },
-        { type: "vegetarian", active: false },
-        { type: "kosher", active: false },
-        { type: "spicy", active: false },
-        { type: "low fat", active: false },
-        { type: "no nuts", active: false },
-        { type: "gluten free", active: false },
-        { type: "organic", active: false },
-        { type: "halal", active: false },
+      allergies: [
+        { type: "Peanuts", active: false },
+        { type: "Eggs", active: false },
+        { type: "People", active: false },
+        { type: "Seafood", active: false },
+        { type: "Tree nuts", active: false },
+        { type: "Milk", active: false },
+        { type: "Soy Beans", active: false },
+        { type: "Shellfish", active: false },
+        { type: "School", active: false },
+      ],
+      meats: [
+        { type: "Beef", active: false },
+        { type: "Pork", active: false },
+        { type: "Chicken", active: false },
+        { type: "Lamb", active: false },
+        { type: "Duck", active: false },
+        { type: "Guinea Pig", active: false },
       ],
     };
   }
 
-  getActive = (type) => {
-    for (let button of this.state.buttons) {
-      if (button.type === type) {
-        return button.active;
-      }
-    }
-  };
+  // getActive = (type) => {
+  //   for (let allergy of this.state.allergies) {
+  //     if (allergy.type === type) {
+  //       return allergy.active;
+  //     }
+  //   }
+  // };
 
-  toggleActive = (type) => {
-    let newButtons = this.state.buttons.map((x) =>
-      x.type === type ? { type: x.type, active: !x.active } : x
-    );
-    this.setState({ buttons: newButtons });
-  };
+  // toggleActive = (type) => {
+  //   let newAllergies = this.state.allergies.map((x) =>
+  //     x.type === type ? { type: x.type, active: !x.active } : x
+  //   );
+  //   this.setState({ allergies: newAllergies });
+  // };
 
   render() {
     return (
       <div style={{ width: "100%" }}>
         <div className="diet-side-menu-buttons">
           <ByteButton
-            style={{ color: "blue" }}
+            style={{ color: "orange" }}
             to="/loading"
             label="Finish"
             onClick={() => {
@@ -57,7 +65,29 @@ class AdvancedPage extends React.Component {
           />
         </div>
         <div className="advanced-section">
-          
+          <div className="allergy-section">
+            <p>Allergies: </p>
+            <div className="allergy-list">
+              
+                {this.state.allergies.map((x) => (
+                  <div className="allergy-item">
+                    <input type="checkbox" />
+                    <p>{x.type}</p>
+                  </div>
+                ))}
+            </div>
+          </div>
+          <div className="meat-section">
+            <p>Meats to avoid: </p>
+            <div className="meat-list">
+              {this.state.meats.map((x) => (
+                <div className="meat-item">
+                  <input type="checkbox" />
+                  <p>{x.type}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     );

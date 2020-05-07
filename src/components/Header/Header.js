@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Profile from "./Profile";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { getAction } from "../../redux/reducers/appReducer";
+import { getAction } from "../../redux/reducers";
 import {
   USER_LOGGED_IN,
   USER_LOGGED_OUT,
@@ -16,12 +16,11 @@ class Header extends Component {
     super(props);
   }
 
-
   render() {
     // These are the dispatch methods
     let { changeActivePage, activePage } = this.props;
     // These are from the Redux store
-    let { login, logout, loggedIn } = this.props;
+    let { logout, loggedIn } = this.props;
     return (
       <nav className="header">
         <div className="logo">
@@ -56,8 +55,19 @@ class Header extends Component {
           >
             Contact
           </NavLink>
+          {loggedIn ? (
+            <NavLink
+              className={
+                "navlink" + (activePage === "map" ? " navlink-selected" : "")
+              }
+              to="/map"
+              onClick={() => changeActivePage("map")}
+            >
+              World Map
+            </NavLink>
+          ) : null}
         </nav>
-        <Profile/>
+        {loggedIn ? <Profile /> : null}
       </nav>
     );
   }
@@ -74,9 +84,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    login: () => {
-      dispatch(getAction(USER_LOGGED_IN));
-    },
     logout: () => {
       dispatch(getAction(USER_LOGGED_OUT));
     },

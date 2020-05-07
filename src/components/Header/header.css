@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: row;
   padding-left: 20px;
+  z-index: 1;
+  height: 65px;
 }
 .logo-font {
   font-family: "A Goblin Appears";

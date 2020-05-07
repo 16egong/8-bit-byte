@@ -57,10 +57,106 @@
   margin: 10px;
 }
 
+.allergy-section {
+  border: 4px dashed var(--byte-orange);
+  border-radius: 15px;
+  padding: 30px;
+  background-color: white;
+  margin: auto;
+  margin-top: 20px;
+  justify-content: center;
+  width: 80%;
+  max-width: 750px;
+}
+
+.allergy-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 180px);
+  gap: 20px;
+  justify-content: center;
+  width: 80%;
+  max-width: 750px;
+  margin: auto;
+  padding: 30px;
+}
+
+.meat-section {
+  border: 4px dashed var(--byte-orange);
+  border-radius: 15px;
+  padding: 30px;
+  background-color: white;
+  margin: auto;
+  margin-top: 20px;
+  justify-content: center;
+  width: 80%;
+  max-width: 750px;
+}
+
+.meat-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 180px);
+  gap: 20px;
+  justify-content: center;
+  width: 80%;
+  max-width: 750px;
+  margin: auto;
+  padding: 30px;
+  
+}
 .load-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   height: auto;
   width: 20%;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 60%;
+  box-sizing: border-box;
+}
+
+.login-container label {
+  color: var(--byte-orange);
+  font-size: 1.5rem;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.login-input {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.contact-container {
+  border-radius: 25px;
+  color: white;
+  height: 70vh;
+  margin: 30px 40px 30px 40px;
+  /* display: flex; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "A Goblin Appears";
+}
+
+.contact-text {
+  margin-top: 50px;
+  line-height: 50px;
+  text-align: left;
+  margin-left: 200px;
 }

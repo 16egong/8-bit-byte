@@ -9,7 +9,7 @@ const DietButton = (props) => {
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/vegan.png"
           active={props.active}
           onClick={props.onClick}
         />
@@ -27,7 +27,7 @@ const DietButton = (props) => {
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/kosher.png"
           active={props.active}
           onClick={props.onClick}
         />
@@ -36,25 +36,25 @@ const DietButton = (props) => {
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/spicy.png"
           active={props.active}
           onClick={props.onClick}
         />
       );
-    case "low fat":
+    case "lowfat":
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/lowfat.png"
           active={props.active}
           onClick={props.onClick}
         />
       );
-    case "no nuts":
+    case "nonuts":
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/nutfree.png"
           active={props.active}
           onClick={props.onClick}
         />
@@ -63,7 +63,7 @@ const DietButton = (props) => {
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/halal.png"
           active={props.active}
           onClick={props.onClick}
         />
@@ -72,22 +72,29 @@ const DietButton = (props) => {
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/organic.png"
           active={props.active}
           onClick={props.onClick}
         />
       );
-    case "gluten free":
+    case "glutenfree":
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/glutenfree.png"
           active={props.active}
           onClick={props.onClick}
         />
       );
     default:
-      return <Diet type="Error" src={"error.png"} active={false} />;
+      return (
+        <Diet
+          type="Error"
+          src={"error.png"}
+          active={false}
+          onClick={() => {}}
+        />
+      );
   }
 };
 
