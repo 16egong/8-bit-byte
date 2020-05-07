@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Page from "./Page";
 import Load from "./LoadingPage"
 import Diet from "./DietaryPage";
+import Advanced from "./AdvancedPage"
 import Home from "./HomePage";
 import Map from "../WorldMap/";
 import Recipe from "../Recipe"
@@ -66,6 +67,20 @@ const RegisterPage = () => {
   );
 };
 
+const AdvancedPage = () => {
+  return (
+    <Page
+      title="Advanced Preferences"
+      subtitle="Choose advanced dietary preferences"
+      backgroundColor="#FFD953"
+    >
+      <div className="page-content-container">
+        <Advanced/>
+      </div>
+    </Page>
+  );
+};
+
 const DietaryPage = () => {
   return (
     <Page
@@ -112,5 +127,5 @@ const RecipePage = () => {
   );
 };
 
-export { Home as HomePage, LoginPage, RegisterPage, DietaryPage, LoadingPage, MapPage, RecipePage };
+export { Home as HomePage, AdvancedPage, LoginPage, RegisterPage, DietaryPage, LoadingPage, MapPage, RecipePage };
 export default Page;
