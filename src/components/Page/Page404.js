@@ -1,7 +1,10 @@
 import React from "react";
 import ByteButton from "../ByteButton";
+import { connect } from "react-redux";
+import { getAction } from "../../redux/reducers";
+import { CHANGE_ACTIVE_PAGE } from "../../redux/actionTypes";
 
-const Page404 = () => {
+const Page404 = ({ changeActive }) => {
   return (
     <div className="login-hero">
       <div style={{ marginBottom: 60 }}>
@@ -18,7 +21,7 @@ const Page404 = () => {
           to="/"
           label="Back to Home"
           onClick={() => {
-            this.props.changeActive("home");
+            changeActive("home");
           }}
         />
       </div>
@@ -26,4 +29,10 @@ const Page404 = () => {
   );
 };
 
-export default Page404;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeActive: (page) => dispatch(getAction(CHANGE_ACTIVE_PAGE, page)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Page404);
