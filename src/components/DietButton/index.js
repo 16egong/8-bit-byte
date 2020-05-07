@@ -27,7 +27,7 @@ const DietButton = (props) => {
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/kosher.png"
           active={props.active}
           onClick={props.onClick}
         />
@@ -36,7 +36,7 @@ const DietButton = (props) => {
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/spicy.png"
           active={props.active}
           onClick={props.onClick}
         />
@@ -45,7 +45,7 @@ const DietButton = (props) => {
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/lowfat.png"
           active={props.active}
           onClick={props.onClick}
         />
@@ -54,7 +54,7 @@ const DietButton = (props) => {
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/nutfree.png"
           active={props.active}
           onClick={props.onClick}
         />
@@ -63,7 +63,7 @@ const DietButton = (props) => {
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/halal.png"
           active={props.active}
           onClick={props.onClick}
         />
@@ -72,7 +72,7 @@ const DietButton = (props) => {
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/organic.png"
           active={props.active}
           onClick={props.onClick}
         />
@@ -81,7 +81,7 @@ const DietButton = (props) => {
       return (
         <Diet
           type={type}
-          src="dietary/vegetarian.png"
+          src="dietary/glutenfree.png"
           active={props.active}
           onClick={props.onClick}
         />
