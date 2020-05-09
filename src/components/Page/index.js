@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Page from "./Page";
 import Load from "./LoadingPage";
 import Diet from "./DietaryPage";
+import Advanced from "./AdvancedPage"
 import Login from "./LoginPage";
 import Register from "./RegisterPage";
 import Home from "./HomePage";
@@ -35,6 +36,20 @@ const RegisterPage = () => {
     >
       <div className="page-content-container">
         <Register />
+      </div>
+    </Page>
+  );
+};
+
+const AdvancedPage = () => {
+  return (
+    <Page
+      title="Advanced Preferences"
+      subtitle="Choose advanced dietary preferences"
+      backgroundColor="#FFD953"
+    >
+      <div className="page-content-container">
+        <Advanced/>
       </div>
     </Page>
   );
@@ -87,6 +102,7 @@ export {
   LoginPage,
   RegisterPage,
   DietaryPage,
+  AdvancedPage,
   LoadingPage,
   MapPage,
   RecipeSelectionPage,

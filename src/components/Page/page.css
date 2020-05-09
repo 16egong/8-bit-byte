@@ -57,6 +57,52 @@
   margin: 10px;
 }
 
+.allergy-section {
+  border: 4px dashed var(--byte-orange);
+  border-radius: 15px;
+  padding: 30px;
+  background-color: white;
+  margin: auto;
+  margin-top: 20px;
+  justify-content: center;
+  width: 80%;
+  max-width: 750px;
+}
+
+.allergy-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 180px);
+  gap: 20px;
+  justify-content: center;
+  width: 80%;
+  max-width: 750px;
+  margin: auto;
+  padding: 30px;
+}
+
+.meat-section {
+  border: 4px dashed var(--byte-orange);
+  border-radius: 15px;
+  padding: 30px;
+  background-color: white;
+  margin: auto;
+  margin-top: 20px;
+  justify-content: center;
+  width: 80%;
+  max-width: 750px;
+}
+
+.meat-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 180px);
+  gap: 20px;
+  justify-content: center;
+  width: 80%;
+  max-width: 750px;
+  margin: auto;
+  padding: 30px;
+  
+}
 .load-icon {
   display: flex;
   align-items: center;

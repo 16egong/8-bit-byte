@@ -5,6 +5,7 @@ import {
   LoginPage,
   RegisterPage,
   LoadingPage,
+  AdvancedPage,
   DietaryPage,
   MapPage,
   RecipeSelectionPage,
@@ -62,6 +63,9 @@ class App extends React.Component {
               </Route>
               <Route path="/dietary-preferences">
                 <DietaryPage changeActive={(page) => this.changeActive(page)} />
+              </Route>
+              <Route path="/advanced">
+                <AdvancedPage changeActive={(page) => this.changeActive(page)} />
               </Route>
               <Route path="/map">
                 <MapPage changeActive={(page) => this.changeActive(page)} />
