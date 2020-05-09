@@ -48,7 +48,7 @@ let reducers = (state = initialState, action) => {
         user: { ...state.user, name: action.payload },
       };
     case USER_LOGGED_OUT:
-      return { ...state, loggedIn: false };
+      return initialState;
     case CHANGE_ACTIVE_PAGE:
       return { ...state, activePage: action.payload };
     case CHANGE_DIETARY_PREFERENCE:
