@@ -7,7 +7,7 @@ import {
   CHANGE_ACTIVE_PAGE,
 } from "../../../redux/actionTypes";
 import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
-import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import { faSignOutAlt, faCog } from "@fortawesome/free-solid-svg-icons";
 import silhouette from "../../../assets/images/silhouette.png";
 import "./profile.css";
 
@@ -56,6 +56,19 @@ class ProfileDropdown extends Component {
               Total XP: <span className="goblin-text small">{user.xp}</span>
             </p>
           </div>
+          <Link
+            to="/dietary-preferences"
+            onClick={() => {
+              this.toggleProfile();
+              changeActivePage("dietary");
+            }}
+            style={{ textDecoration: "none", width: "95%" }}
+          >
+            <div className="signout-button">
+              <FA icon={faCog} size="1x" />
+              <p className="goblin-text small">Preferences</p>
+            </div>
+          </Link>
           <Link
             to="/"
             onClick={() => {

@@ -52,7 +52,6 @@ let reducers = (state = initialState, action) => {
     case CHANGE_ACTIVE_PAGE:
       return { ...state, activePage: action.payload };
     case CHANGE_DIETARY_PREFERENCE:
-      console.log(state.user.preferences);
       return {
         ...state,
         user: {
