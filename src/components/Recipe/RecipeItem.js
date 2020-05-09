@@ -13,7 +13,7 @@ import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 import SocialShare from "../SocialShare";
 import "./recipe-item.css";
 
-const RecipeItem = ({ completeRecipe, addExperience }) => {
+const RecipeItem = ({ completeRecipe, addExperience, recipeMade }) => {
   let { recipeID } = useParams();
   let recipe = allRecipes[recipeID];
   if (recipe !== undefined) {
@@ -72,10 +72,14 @@ const RecipeItem = ({ completeRecipe, addExperience }) => {
         <div className="recipe-item-share-xp-container">
           <SocialShare />
           <div
-            className="recipe-item-xp-button"
+            className={
+              recipeMade
+                ? "recipe-item-xp-button completed"
+                : "recipe-item-xp-button"
+            }
             onClick={() => {
               addExperience(recipe.xp);
-              completeRecipe();
+              completeRecipe(recipeID);
             }}
           >
             <FA icon={faUtensils} size="1x" />
@@ -95,7 +99,7 @@ const RecipeItem = ({ completeRecipe, addExperience }) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    completeRecipe: () => dispatch(getAction(USER_COMPLETED_RECIPE)),
+    completeRecipe: (id) => dispatch(getAction(USER_COMPLETED_RECIPE, id)),
     addExperience: (xp) => dispatch(getAction(ADD_EXPERIENCE_POINTS, xp)),
   };
 };
