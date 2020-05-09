@@ -29,7 +29,7 @@ const initialState = {
       peanuts: false,
       eggs: false,
       people: false,
-      seafood: true,
+      seafood: false,
       treenuts: false,
       dairy: false,
       soy: false,
