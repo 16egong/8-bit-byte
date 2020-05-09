@@ -50,7 +50,7 @@ class ProfileDropdown extends Component {
             </p>
             <p>
               Recipes Completed:{" "}
-              <span className="goblin-text small">{user.recipes}</span>
+              <span className="goblin-text small">{user.recipes.length}</span>
             </p>
             <p>
               Total XP: <span className="goblin-text small">{user.xp}</span>
