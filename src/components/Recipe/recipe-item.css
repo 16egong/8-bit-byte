@@ -76,6 +76,7 @@
 .recipe-item-xp-button {
   display: flex;
   align-items: center;
+  margin-top: 0;
   justify-content: space-between;
   background-color: rgb(247, 188, 78);
   border-radius: 50px;
@@ -85,4 +86,15 @@
   font-size: 2.5rem;
   box-shadow: 0px 6px 0px #eda326;
   cursor: pointer;
+  transition: all 150ms;
+}
+
+.recipe-item-xp-button:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.disabled {
+  background-color: grey;
+  box-shadow: 0px 6px 0px rgb(78, 78, 78);
 }
