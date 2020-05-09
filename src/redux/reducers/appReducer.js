@@ -5,6 +5,8 @@ import {
   CHANGE_DIETARY_PREFERENCE,
   USER_COMPLETED_RECIPE,
   ADD_EXPERIENCE_POINTS,
+  CHANGE_ALLERGY,
+  CHANGE_MEAT_PREFERENCE,
 } from "../actionTypes";
 
 const initialState = {
@@ -22,6 +24,23 @@ const initialState = {
       halal: false,
       organic: false,
       glutenfree: false,
+    },
+    allergies: {
+      peanuts: false,
+      eggs: false,
+      people: false,
+      seafood: true,
+      treenuts: false,
+      dairy: false,
+      soy: false,
+      shellfish: false,
+    },
+    meats: {
+      beef: false,
+      pork: false,
+      chicken: false,
+      lamb: false,
+      duck: false,
     },
     xp: 0,
     recipes: 0,
@@ -52,7 +71,6 @@ let reducers = (state = initialState, action) => {
     case CHANGE_ACTIVE_PAGE:
       return { ...state, activePage: action.payload };
     case CHANGE_DIETARY_PREFERENCE:
-      console.log(state.user.preferences);
       return {
         ...state,
         user: {
@@ -60,6 +78,28 @@ let reducers = (state = initialState, action) => {
           preferences: {
             ...state.user.preferences,
             [action.payload]: !state.user.preferences[action.payload],
+          },
+        },
+      };
+    case CHANGE_ALLERGY:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          allergies: {
+            ...state.user.allergies,
+            [action.payload]: !state.user.allergies[action.payload],
+          },
+        },
+      };
+    case CHANGE_MEAT_PREFERENCE:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          meats: {
+            ...state.user.meats,
+            [action.payload]: !state.user.meats[action.payload],
           },
         },
       };

@@ -1,5 +1,12 @@
 import React from "react";
 import "./page.css";
+import { connect } from "react-redux";
+import {
+  CHANGE_MEAT_PREFERENCE,
+  CHANGE_ALLERGY,
+  CHANGE_ACTIVE_PAGE,
+} from "../../redux/actionTypes";
+import { getAction } from "../../redux/reducers";
 import ByteButton from "../ByteButton";
 // import vegan from "../../assets/imgs/vegan.png";
 
@@ -12,11 +19,10 @@ class AdvancedPage extends React.Component {
         { type: "Eggs", active: false },
         { type: "People", active: false },
         { type: "Seafood", active: false },
-        { type: "Tree nuts", active: false },
-        { type: "Milk", active: false },
-        { type: "Soy Beans", active: false },
+        { type: "Treenuts", active: false },
+        { type: "Dairy", active: false },
+        { type: "Soy", active: false },
         { type: "Shellfish", active: false },
-        { type: "School", active: false },
       ],
       meats: [
         { type: "Beef", active: false },
@@ -24,27 +30,18 @@ class AdvancedPage extends React.Component {
         { type: "Chicken", active: false },
         { type: "Lamb", active: false },
         { type: "Duck", active: false },
-        { type: "Guinea Pig", active: false },
       ],
     };
   }
 
-  // getActive = (type) => {
-  //   for (let allergy of this.state.allergies) {
-  //     if (allergy.type === type) {
-  //       return allergy.active;
-  //     }
-  //   }
-  // };
-
-  // toggleActive = (type) => {
-  //   let newAllergies = this.state.allergies.map((x) =>
-  //     x.type === type ? { type: x.type, active: !x.active } : x
-  //   );
-  //   this.setState({ allergies: newAllergies });
-  // };
-
   render() {
+    let {
+      allergies,
+      meats,
+      changeActivePage,
+      changeAllergy,
+      changeMeatPref,
+    } = this.props;
     return (
       <div style={{ width: "100%" }}>
         <div className="diet-side-menu-buttons">
@@ -53,14 +50,14 @@ class AdvancedPage extends React.Component {
             to="/loading"
             label="Finish"
             onClick={() => {
-              // props.changeActive("map");
+              changeActivePage("map");
             }}
           />
           <ByteButton
             to="/dietary-preferences"
             label="Back"
             onClick={() => {
-              // props.changeActive("advanced");
+              changeActivePage("dietary");
             }}
           />
         </div>
@@ -68,13 +65,16 @@ class AdvancedPage extends React.Component {
           <div className="allergy-section">
             <p>Allergies: </p>
             <div className="allergy-list">
-              
-                {this.state.allergies.map((x) => (
-                  <div className="allergy-item">
-                    <input type="checkbox" />
-                    <p>{x.type}</p>
-                  </div>
-                ))}
+              {this.state.allergies.map((x) => (
+                <div className="allergy-item">
+                  <input
+                    type="checkbox"
+                    checked={allergies[x.type.toLowerCase()]}
+                    onClick={() => changeAllergy(x.type.toLowerCase())}
+                  />
+                  <p>{x.type}</p>
+                </div>
+              ))}
             </div>
           </div>
           <div className="meat-section">
@@ -82,7 +82,11 @@ class AdvancedPage extends React.Component {
             <div className="meat-list">
               {this.state.meats.map((x) => (
                 <div className="meat-item">
-                  <input type="checkbox" />
+                  <input
+                    type="checkbox"
+                    checked={meats[x.type.toLowerCase()]}
+                    onClick={() => changeMeatPref(x.type.toLowerCase())}
+                  />
                   <p>{x.type}</p>
                 </div>
               ))}
@@ -94,4 +98,26 @@ class AdvancedPage extends React.Component {
   }
 }
 
-export default AdvancedPage;
+const mapStateToProps = (state) => {
+  let user = state.user;
+  return {
+    allergies: user.allergies,
+    meats: user.meats,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeMeatPref: (pref) => {
+      dispatch(getAction(CHANGE_MEAT_PREFERENCE, pref));
+    },
+    changeAllergy: (pref) => {
+      dispatch(getAction(CHANGE_ALLERGY, pref));
+    },
+    changeActivePage: (page) => {
+      dispatch(getAction(CHANGE_ACTIVE_PAGE, page));
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(AdvancedPage);
